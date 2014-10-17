@@ -1,0 +1,72 @@
+/**
+* LAYOUT
+* All general layout items (body, content div and other structures)
+*/
+
+@include global-reset();
+
+html {
+	font-size: $base-size;
+	font-family: 'open_sansregular';
+	color: $firefly;
+}
+
+body {
+	background:#efefef;
+}
+
+.lc {
+	max-width: 1200px;
+	margin:0 auto;
+	width:91%;
+	@include clearfix();
+}
+
+.content {
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+  	background-size: 50px 50px;
+
+	@include breakpoint($desktop-small) {
+		margin-top: 6em;
+	}
+		
+	.lc {
+		padding:20px 0;
+
+		@include breakpoint($tablet-port) {
+			padding:30px 35px;
+		}
+
+		@include breakpoint($tablet-land) {
+			padding:30px 46px;
+		}
+
+		@include breakpoint($desktop-small) {
+			padding:35px 56px;
+			
+			width:auto;
+		}
+	}
+}
+
+.img {
+	text-align: center;
+	margin:0 0 10px 0;
+
+	@include breakpoint($tablet-port) {
+		float:left;
+		margin:0;
+	}
+}
+
+.details {
+	@include breakpoint($tablet-port) {
+		float:left;
+		width:78%;
+		padding:0 0 0 2em;
+	}
+
+	@include breakpoint($tablet-land) {
+		width:80%;
+	}
+}

@@ -1,0 +1,94 @@
+/**
+* FONTS
+* Custom font faces.
+*/
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans/opensans-regular-webfont.eot');
+    src: url('../fonts/opensans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-regular-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-regular-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans/opensans-light-webfont.eot');
+    src: url('../fonts/opensans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-light-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-light-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('../fonts/opensans/opensans-bold-webfont.eot');
+    src: url('../fonts/opensans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-bold-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-bold-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansitalic';
+    src: url('../fonts/opensans/opensans-italic-webfont.eot');
+    src: url('../fonts/opensans/opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/opensans/opensans-italic-webfont.woff') format('woff'),
+         url('../fonts/opensans/opensans-italic-webfont.ttf') format('truetype'),
+         url('../fonts/opensans/opensans-italic-webfont.svg#open_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Icons */
+@font-face {
+    font-family: 'mikewgdIcons';
+    src:url('fonts/mikewgdIcons.eot');
+}
+@font-face {
+    font-family: 'mikewgdIcons';
+    src: url(data:application/font-woff;charset=utf-8;base64,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) format('woff'),
+         url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+    font-family: 'mikewgdIcons';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-briefcase, .icon-info, .icon-envelope {
+    font-family: 'mikewgdIcons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-briefcase:before {
+    content: "\21";
+}
+.icon-info:before {
+    content: "\22";
+}
+.icon-envelope:before {
+    content: "\23";
+}
