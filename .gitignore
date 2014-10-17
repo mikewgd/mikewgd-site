@@ -1,3 +1,4 @@
 .gitmodules
 node_modules
 .sass-cache
+config.json
