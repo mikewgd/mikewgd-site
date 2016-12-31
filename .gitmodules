@@ -1,0 +1,3 @@
+[submodule "portfolio/JavaScript"]
+	path = portfolio/JavaScript
+	url = https://github.com/mikewgd/my-js
