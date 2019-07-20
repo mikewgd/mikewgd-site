@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: mikewgd/mikewgd
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "entries"
+    label: "Portfolio Entries"
+    folder: "content/entries"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "src/pages/about/about.md"
+        fields:
+          - {label: Page Header, name: pageHeader, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Home Page"
+        name: "home"
+        file: "src/pages/index.md"
+        fields:
+          - {label: Page Header, name: pageHeader, widget: markdown}
+          - {label: Entries Header, name: entryHeader, widget: string}
