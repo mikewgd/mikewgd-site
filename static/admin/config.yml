@@ -1,36 +1,88 @@
 backend:
-  name: git-gateway
+  name: github
   branch: dev
   repo: mikewgd/mikewgd
 
-media_folder: static/imgz
+media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "entries"
-    label: "Portfolio Entries"
-    folder: "content/entries"
+  -
+    name: entries
+    label: 'Portfolio Entries'
+    folder: content/entries
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{title}}'
     editor:
-     preview: false
+      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - label: "Pages"
-    name: "pages"
+      -
+        label: Title
+        name: title
+        widget: string
+      -
+        label: 'Cover Image'
+        name: coverImage
+        widget: image
+        allow_multiple: false
+      -
+        label: Blurb
+        name: blurb
+        widget: text
+      -
+        label: Description
+        name: description
+        widget: markdown
+      -
+        label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        options:
+          - Vue.js
+          - SCSS/CSS
+          - ES6
+          - React.js
+          - Contentful
+          - Angular.js
+          - Stylus/CSS
+          - Node.js
+          - MySQL
+          - jQuery
+          - Webpack
+          - Contentful UI Ext
+          - Paper.js          
+          - AWS
+          - Gulp
+          - Vanilla JS
+          - PHP
+  -
+    label: Pages
+    name: pages
     files:
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/about/about.md"
+      -
+        label: 'About Page'
+        name: about
+        file: content/about.md
         fields:
-          - {label: Page Header, name: pageHeader, widget: markdown}
-          - {label: Body, name: body, widget: markdown}
-      - label: "Home Page"
-        name: "home"
-        file: "src/pages/index.md"
+          -
+            label: 'Page Header'
+            name: pageHeader
+            widget: markdown
+          -
+            label: Body
+            name: body
+            widget: markdown
+      -
+        label: 'Home Page'
+        name: home
+        file: content/home.md
         fields:
-          - {label: Page Header, name: pageHeader, widget: markdown}
-          - {label: Entries Header, name: entryHeader, widget: string}
+          -
+            label: 'Page Header'
+            name: pageHeader
+            widget: markdown
+          -
+            label: 'Entries Header'
+            name: entryHeader
+            widget: string
