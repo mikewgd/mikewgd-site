@@ -63,7 +63,7 @@ collections:
       -
         label: 'About Page'
         name: about
-        file: content/about.md
+        file: content/pages/about.md
         fields:
           -
             label: 'Page Header'
@@ -76,7 +76,7 @@ collections:
       -
         label: 'Home Page'
         name: home
-        file: content/home.md
+        file: content/pages/home.md
         fields:
           -
             label: 'Page Header'
