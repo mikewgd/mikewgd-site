@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet"
 
-import { PageTemplate, Paragraph } from '../components';
+import { PageTemplate, Paragraph } from 'components';
 
 const Home = () => (
   <PageTemplate>

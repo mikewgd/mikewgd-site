@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, Logo } from './index.css';
-import { PrimaryNavigation } from '../../../components';
+import { PrimaryNavigation } from 'components';
 
 const HeaderComponent = () => (
   <Header>

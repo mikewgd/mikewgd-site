@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageTemplate, Paragraph } from '../../components';
+import { PageTemplate, Paragraph } from 'components';
 
 const About = () => (
   <PageTemplate>
