@@ -1,4 +1,5 @@
 ---
+title: About Page
 pageHeader: >-
   # My name is Michael Levy and I hail from New Jersey. Now I live in NYC and
   work at [Allergan](https://www.linkedin.com/in/mikelevy). I went to school in
