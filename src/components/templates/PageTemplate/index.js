@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GlobalStyle } from '../../../styles/global';
+import { GlobalStyle, Container } from '../../../styles/global';
 import { Header } from 'components';
 
 export const Main = styled.main``;
 
 const PageTemplate = ({ children }) => (
-  <React.Fragment>
+  <Container>
     <GlobalStyle />
     <Header />
     <Main>
       {children}
     </Main>
-  </React.Fragment>
+  </Container>
 );
 
 export default PageTemplate

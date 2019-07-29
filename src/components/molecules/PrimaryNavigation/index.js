@@ -1,6 +1,7 @@
 import React from 'react';
-import { Navigation, NavLink } from './index.css';
+import { Navigation, NavLink, Hamburger, Line } from './index.css';
 import { ROUTE } from '../../../constants/routes';
+import { useToggle } from '../../../hooks/useToggle';
 
 const ROUTES = [
   {
@@ -12,21 +13,35 @@ const ROUTES = [
     id: 'about',
     text: 'About',
     path: ROUTE.ABOUT
+  },
+  {
+    id: 'portfolio',
+    text: 'Portfolio',
+    path: ROUTE.PORTFOLIO
   }
 ];
 
-const PrimaryNavigation = () => (
-  <Navigation>
-    {ROUTES.map(route => (
-      <NavLink
-        key={route.id}
-        to={route.path}
-        activeClassName="active"
-      >
-        {route.text}
-      </NavLink>
-    ))}
-  </Navigation>
-);
+const PrimaryNavigation = () => {
+  const [toggleState, setToggleState] = useToggle(false);
+
+  return (
+    <React.Fragment>
+      <Hamburger active={toggleState} onClick={setToggleState}>
+        {[0, 1, 2].map(i => <Line key={i} />)}
+      </Hamburger>
+      <Navigation opened={toggleState}>
+        {ROUTES.map(route => (
+          <NavLink
+            key={route.id}
+            to={route.path}
+            activeClassName="active"
+          >
+            {route.text}
+          </NavLink>
+        ))}
+      </Navigation>
+    </React.Fragment>
+  );
+};
 
 export default PrimaryNavigation;
