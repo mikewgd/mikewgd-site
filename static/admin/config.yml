@@ -16,11 +16,7 @@ collections:
     editor:
       preview: false
     fields:
-      - 
-        label: "Template Key"
-        name: "templateKey"
-        widget: "hidden"
-        default: "src/pages/portfolio/entry.js"
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/portfolio/entry.js"}
       -
         label: 'Cover Image'
         name: coverImage
@@ -81,11 +77,7 @@ collections:
         name: portfolio
         file: src/pages/portfolio/index.md
         fields:
-          - 
-            label: "Template Key"
-            name: "templateKey"
-            widget: "hidden"
-            default: "src/pages/portfolio/index.js"
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/portfolio/index.js"}
           -
             label: 'Page Header'
             name: pageHeader
@@ -95,11 +87,7 @@ collections:
         name: about
         file: src/pages/about/index.md
         fields:
-          - 
-            label: "Template Key"
-            name: "templateKey"
-            widget: "hidden"
-            default: "src/pages/about/index.js"
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/about/index.js"}
           -
             label: 'Page Header'
             name: pageHeader
@@ -113,11 +101,7 @@ collections:
         name: home
         file: src/pages/index.md
         fields:
-          - 
-            label: "Template Key"
-            name: "templateKey"
-            widget: "hidden"
-            default: "src/pages/index.js"
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/index.js"}
           -
             label: 'Page Header'
             name: pageHeader
