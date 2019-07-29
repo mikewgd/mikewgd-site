@@ -18,6 +18,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/portfolio/entry.js"}
       -
+        label: Title
+        name: title
+        widget: string
+      -
         label: 'Cover Image'
         name: coverImage
         widget: image
@@ -34,6 +38,7 @@ collections:
         label: Entry URL
         name: entryUrl
         widget: string
+        required: false
       -
         label: Tags
         name: tags
