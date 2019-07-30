@@ -106,7 +106,11 @@ collections:
         name: home
         file: src/pages/index.md
         fields:
-          - {label: 'Layout', name: layout, widget: hidden, default: 'blog'}
+          - 
+            label: 'Layout'
+            name: layout
+            widget: hidden
+            default: 'blog'
           -
             label: 'Page Header'
             name: pageHeader
