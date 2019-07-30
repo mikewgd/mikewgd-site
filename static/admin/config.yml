@@ -106,7 +106,7 @@ collections:
         name: home
         file: src/pages/index.md
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "src/pages/index.js"}
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index"}
           -
             label: 'Page Header'
             name: pageHeader
