@@ -11,7 +11,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    width: 100vw;
     background-color: #F4F4F4;
     -webkit-overflow-scrolling: touch;
     ${ROBOTO_REGULAR}

@@ -48,12 +48,12 @@ export const NavLink = styled(Link)`
   letter-spacing: 8%;
   display: block;
   position: static;
-  color: #515052;
+  color: ${Color.DARK_LIVER};
   transition: background-color .3s ease-in-out;
   text-transform: uppercase;
 
   &:visited {
-    color: #515052;
+    color: ${Color.DARK_LIVER};
   }
 
   &:hover {

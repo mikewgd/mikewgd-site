@@ -53,6 +53,10 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  color: ${Color.DARK_LIVER};
 `;
 
 export const H3 = styled.h3`
