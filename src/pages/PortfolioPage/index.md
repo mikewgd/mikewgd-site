@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/index.js
+templateKey: PortfolioPage/index.js
 pageHeader: test entry
 ---
 
