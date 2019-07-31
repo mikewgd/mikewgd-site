@@ -1,8 +1,10 @@
 import React from 'react';
+import { graphql } from 'gatsby'
 
 import { PageTemplate, Paragraph, Heading } from 'components';
 
-const About = () => {
+const About = ({ data }) => {
+  console.log(data);
   return (
     <PageTemplate>
       <Heading.H1
@@ -40,3 +42,14 @@ const About = () => {
 };
 
 export default About;
+
+/* export const aboutPageQuery = graphql`
+  query AboutPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        pageHeader
+      }
+    }
+  }
+` */
