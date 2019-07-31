@@ -10,9 +10,9 @@ collections:
   -
     name: entries
     label: 'Portfolio Entries'
-    folder: src/pages/portfolio/entries
+    folder: src/pages/portfolio/entry
     create: true
-    slug: 'portfolio/{{title}}'
+    slug: 'portfolio/{{slug}}'
     editor:
       preview: false
     fields:
@@ -20,7 +20,7 @@ collections:
         label: "Template Key"
         name: "templateKey"
         widget: "hidden"
-        default: "src/pages/PortfolioPage/entry.js"
+        default: "src/pages/portfolio/entry.js"
       -
         label: Title
         name: title
@@ -84,7 +84,7 @@ collections:
       - 
         label: 'Portfolio Page'
         name: portfolio
-        file: src/pages/PortfolioPage/index.md
+        file: src/pages/portfolio/index.md
         slug: '/portfolio'
         fields:
           -
@@ -98,7 +98,7 @@ collections:
       -
         label: 'About Page'
         name: about
-        file: src/pages/AboutPage/index.md
+        file: src/pages/about/index.md
         fields:
           -
             label: "Template"
@@ -115,7 +115,7 @@ collections:
       -
         label: 'Home Page'
         name: home
-        file: src/pages/HomePage/index.md
+        file: src/pages/index.md
         fields:
           -
             label: "Template"
