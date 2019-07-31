@@ -5,3 +5,4 @@ pageHeader: >-
   software engineer at Allergan.
 ---
 
+## Featured Projects
