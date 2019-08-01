@@ -1,7 +1,7 @@
 ---
 templateKey: AboutPage/index.js
 pageHeader: >-
-  # My name is [Michael Levy](/about) and I hail from New Jersey. Now I live in
+  # My name is [Michael Levy](ABOUT) and I hail from New Jersey. Now I live in
   NYC and work at Allergan. I went to school in Providence, RI at Johnson &
   Wales University.
 ---
