@@ -1,8 +1,9 @@
 ---
 pageHeader: >-
   My name is [Michael Levy](/about) and I hail from New Jersey. Now I live in
-  NYC and work at Allergan. I went to school in Providence, RI at [Johnson &
-  Wales University](https://www.jwu.edu/campuses/providence/index.html).
+  NYC and work at [Allergan](https://www.linkedin.com/in/mikelevy). I went to
+  school in Providence, RI at [Johnson & Wales
+  University](https://www.jwu.edu/campuses/providence/index.html).
 socialLinks:
   - socialType: instagram
     socialUrl: 'https://www.instagram.com/nycmike87/'
