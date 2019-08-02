@@ -26,14 +26,18 @@ const PrimaryNavigation = () => {
 
   return (
     <React.Fragment>
-      <Hamburger active={toggleState} onClick={setToggleState}>
+      <Hamburger
+        active={toggleState}
+        href="#" 
+        handleClick={setToggleState}
+      >
         {[0, 1, 2].map(i => <Line key={i} />)}
       </Hamburger>
       <Navigation opened={toggleState}>
         {ROUTES.map(route => (
           <NavLink
             key={route.id}
-            to={route.path}
+            href={route.path}
             activeClassName="active"
           >
             {route.text}

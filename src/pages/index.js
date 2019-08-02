@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageTemplate, Paragraph, Heading } from 'components';
+import { PageTemplate, Heading } from 'components';
 
 const Home = () => (
   <PageTemplate>

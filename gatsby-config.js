@@ -11,6 +11,7 @@ module.exports = {
     description: '',
   },
   plugins: [
+    `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
@@ -28,6 +29,17 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       },
+    },
+    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark-frontmatter',
+      // default: { blacklist: [] }
+      options: {
+        // frontmatter fields to exclude, including all others
+        blacklist: ['templateKey']
+        // frontmatter fields to include, excluding all others
+        // whitelist: ['markdownField']
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
@@ -51,6 +63,14 @@ module.exports = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: ["gatsby-remark-component"]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/
+        }
       }
     },
   ],

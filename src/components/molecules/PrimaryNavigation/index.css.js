@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
-import { Link } from 'gatsby';
+import { Anchor } from 'components';
 import * as Color from '../../../styles/colors';
 import { media } from "../../../styles/responsive";
 
@@ -41,7 +41,7 @@ export const Navigation = styled.nav`
   `};
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(Anchor)`
   font-size: 14px;
   line-height: 40px;
   font-weight: 300;
@@ -108,7 +108,7 @@ export const Line = styled.div`
   }
 `;
 
-export const Hamburger = styled.a`
+export const Hamburger = styled(Anchor)`
   width: ${widthLine};
   height: ${heightIcon}px;
   position: relative;

@@ -16,19 +16,13 @@ export const GlobalStyle = createGlobalStyle`
     ${ROBOTO_REGULAR}
     font-size: 16px;
     line-height: 140.6%;
-  }
 
-  a {
-    &,
-    &:active,
-    &:visited {
-      color: ${Color.PORTLAND_ORANGE};
-      text-decoration: none;
+    &::-webkit-scrollbar {
+      width: 12px;
     }
-
-    &:active {
-      top: 1px;
-      left: 1px;
+    &::-webkit-scrollbar-thumb {
+      background-color: ${Color.PORTLAND_ORANGE};
+      border-radius: 10px;
     }
   }
 `;
@@ -37,5 +31,5 @@ export const Container = styled.div`
   width: 100%;
   max-width: 630px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 20px;
 `;
