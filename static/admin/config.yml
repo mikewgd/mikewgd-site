@@ -17,10 +17,10 @@ collections:
       preview: false
     fields:
       -
-        label: "Template Key"
-        name: "templateKey"
-        widget: "hidden"
-        default: "src/pages/portfolio/entry.js"
+        label: 'Template Key'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'src/pages/portfolio/entry.js'
       -
         label: Title
         name: title
@@ -66,17 +66,17 @@ collections:
           - Gulp
           - Vanilla JS
           - PHP
-      - label: "Media"
-        name: "media"
-        widget: "file"
+      - label: 'Media'
+        name: 'media'
+        widget: 'file'
         required: false
         media_library:
           config:
             multiple: true
       -
-        label: "Created"
-        name: "created"
-        widget: "datetime"
+        label: 'Created'
+        name: 'created'
+        widget: 'datetime'
   -
     label: Pages
     name: pages
@@ -88,10 +88,6 @@ collections:
         slug: '/portfolio'
         fields:
           -
-            label: "Template"
-            name: "templateKey"
-            widget: "string"
-          -
             label: 'Page Header'
             name: pageHeader
             widget: markdown
@@ -101,10 +97,6 @@ collections:
         file: src/pages/about/index.md
         fields:
           -
-            label: "Template"
-            name: "templateKey"
-            widget: "string"
-          -
             label: 'Page Header'
             name: pageHeader
             widget: markdown
@@ -112,15 +104,30 @@ collections:
             label: Body
             name: body
             widget: markdown
+          -
+            label: 'Social Links'
+            name: 'socialLinks'
+            widget: 'list'
+            fields:
+              -
+                label: 'Url'
+                name: 'socialUrl'
+                width: string
+              -
+                label: 'Type'
+                name: 'socialType'
+                widget: 'select'
+                options: [
+                  'facebook',
+                  'instagram',
+                  'github',
+                  'linkedin',
+                ]
       -
         label: 'Home Page'
         name: home
         file: src/pages/index.md
         fields:
-          -
-            label: "Template"
-            name: "templateKey"
-            widget: "string"
           -
             label: 'Page Header'
             name: pageHeader

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
-import { PageTemplate, Paragraph, Heading } from 'components';
+import { PageTemplate, Paragraph, Heading, SocialLinks } from 'components';
 import { renderMrkdLinks } from '../../utils/renderMrkdLinks';
 
 const transform = {
@@ -11,7 +11,7 @@ const transform = {
 };
 
 const About = ({ data }) => {
-  const { html, fields } = data.allMarkdownRemark.nodes[0];
+  const { html, fields, frontmatter } = data.allMarkdownRemark.nodes[0];
   const { pageHeader } = fields.frontmattermd;
 
   return (
@@ -23,6 +23,7 @@ const About = ({ data }) => {
         {renderMrkdLinks(pageHeader.html)}
       </Heading.H1>
       {convert(html, { transform })}
+      <SocialLinks data={frontmatter.socialLinks} />
     </PageTemplate>
   )
 };
@@ -41,6 +42,12 @@ export const aboutPageQuery = graphql`
           }
         },
         html
+        frontmatter {
+          socialLinks {
+            socialType
+            socialUrl
+          }
+        }
       }
     }
   }  

@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'mikewgd',
+    title: 'mikewgd | Portfolio website for software engineer, Michael Levy',
     description: 'The portfolio website for Michael Levy.',
   },
   plugins: [
