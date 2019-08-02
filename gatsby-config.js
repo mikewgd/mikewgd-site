@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'mikewgd',
-    description: '',
+    description: 'The portfolio website for Michael Levy.',
   },
   plugins: [
     `gatsby-plugin-remove-trailing-slashes`,
