@@ -17,7 +17,7 @@ const fadeIn = keyframes`
 
 export const Main = styled.main`
   opacity: 0;
-  animation: ${fadeIn} 1s ease forwards;
+  animation: ${fadeIn} .5s ease forwards;
 `;
 
 const PageTemplate = ({ children }) => (
