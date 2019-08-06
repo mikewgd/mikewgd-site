@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import convert from 'htmr';
 
 import { PageTemplate, Paragraph, Heading, SocialLinks } from 'components';
-import { renderMrkdLinks } from '../../utils/renderMrkdLinks';
+import { renderMarkdown } from '../../utils/renderMarkdown';
 
 const transform = {
   h2: Heading.H2,
@@ -20,7 +20,7 @@ const About = ({ data }) => {
         margin="22px auto"
         desktopMargin="30px auto"
       >
-        {renderMrkdLinks(pageHeader.html)}
+        {renderMarkdown(pageHeader.html)}
       </Heading.H1>
       {convert(html, { transform })}
       <SocialLinks data={frontmatter.socialLinks} />

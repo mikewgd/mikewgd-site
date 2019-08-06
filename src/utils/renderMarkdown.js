@@ -1,8 +1,12 @@
 import React from 'react';
 import convert from 'htmr';
+import styled from 'styled-components';
+
 import { Anchor } from 'components';
 
-export const renderMrkdLinks = html => {
+const Br = styled.br``;
+
+export const renderMarkdown = html => {
   let i = 0;
   const transform = {
     _: (node, props, children) => {
@@ -19,6 +23,10 @@ export const renderMrkdLinks = html => {
             {children}
           </Anchor>
         );
+      }
+
+      if (node === 'br') {
+        return <Br key={i++} />
       }
   
       return children;

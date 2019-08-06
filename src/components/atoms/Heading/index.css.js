@@ -6,7 +6,7 @@ import { media } from "../../../styles/responsive";
 export const H1 = styled.h1`
   font-weight: 400;
   border-left: 5px solid ${Color.WELDON_BLUE};
-  padding: 2px 0 2px 24px;
+  padding: 2px 0 2px 14px;
   margin: ${props => props.margin || 0};
   font-size: 24px;
   line-height: 135%;
@@ -49,6 +49,7 @@ export const H1 = styled.h1`
   ${media.md`
     font-size: 28px;
     margin: ${props => props.desktopMargin || 0};
+    padding-left: 24px;
   `};
 `;
 
@@ -60,6 +61,8 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
+  font-size: 16px;
+  margin: ${props => props.margin || 0};
 `;
 
 export const H4 = styled.h4`

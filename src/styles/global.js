@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
+
 import { ROBOTO_REGULAR } from './fonts';
 import * as Color from './colors';
-
 
 export const GlobalStyle = createGlobalStyle`
   * {
