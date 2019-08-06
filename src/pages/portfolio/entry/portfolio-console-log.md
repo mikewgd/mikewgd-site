@@ -15,5 +15,5 @@ A tool for programmers to see a viewable console in the browser. Meant to be use
 * Query params (height/toggle/override)
 * Recognizable theme / Syntax highlighting
 * Show timestamp toggle
-* Supported functions: `log, time, timeEnd, assert,`\
-  `clear, count, warn, error (does not include trace functionality)`
+* Supported functions: `log`, `time`, `timeEnd`, `assert`,\
+  `clear`, `count`, `warn`, `error` (does not include trace functionality)
