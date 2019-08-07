@@ -9,6 +9,7 @@ tags:
   - Angular.js
   - SCSS/CSS
   - Gulp
+  - Node.js
 media:
   - mediaType: video
     mediaUrl: 'https://mikelevy.s3.amazonaws.com/sociallydriven-mobile.webm'
