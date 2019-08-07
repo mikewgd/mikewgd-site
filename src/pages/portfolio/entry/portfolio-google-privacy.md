@@ -5,7 +5,7 @@ blurb: Dedication to keeping data private and updated security.
 entryUrl: 'https://privacy.google.com/'
 tags:
   - SCSS/CSS
-  - Angular.js
+  - Angular
 media:
   - mediaType: video
     mediaUrl: 'https://mikelevy.s3.amazonaws.com/privacy.google.mp4'
