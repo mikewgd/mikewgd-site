@@ -44,19 +44,19 @@ collections:
         widget: select
         multiple: true
         options:
-          - Vue.js
+          - Vue
           - SCSS/CSS
           - ES6
-          - React.js
+          - React
           - Contentful
-          - Angular.js
+          - Angular
           - Stylus/CSS
-          - Node.js
+          - Node
           - MySQL
           - jQuery
           - Webpack
           - Contentful UI Ext
-          - Paper.js          
+          - Paper   
           - AWS
           - Gulp
           - Vanilla JS
