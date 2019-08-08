@@ -1,6 +1,6 @@
 ---
 templateKey: src/pages/portfolio/entry.js
-title: 'Equinox: PR Audio Tool'
+title: Running Audio Tool
 blurb: 'A custom audio tool that allows authors to add, edit and tag classes.'
 tags:
   - Vue
