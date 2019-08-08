@@ -12,7 +12,7 @@ collections:
     label: 'Portfolio Entry'
     folder: src/pages/portfolio/entry
     create: true
-    slug: 'portfolio/{{slug}}'
+    slug: 'portfolio/{{title}}'
     editor:
       preview: false
     fields:

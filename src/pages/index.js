@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
@@ -10,8 +11,9 @@ const transform = {
 };
 
 const Home = ({ data }) => {
-  const { html, fields } = data.allMarkdownRemark.nodes[0];
+  const { html, fields } = data.layout.nodes[0];
   const { pageHeader } = fields.frontmattermd;
+  console.log(data.entries)
 
   return (
     <PageTemplate>
@@ -22,7 +24,7 @@ const Home = ({ data }) => {
       >
         {renderMarkdown(pageHeader.html)}
       </Heading.H1>
-      {/* {convert(html, { transform })} */}
+      {convert(html, { transform })}
     </PageTemplate>
   )
 };
@@ -30,8 +32,8 @@ const Home = ({ data }) => {
 export default Home;
 
 export const homePageQuery = graphql`
-  query {
-    allMarkdownRemark(limit: 1, filter: {fields: {slug: {eq: "/"}}}) {
+  query HomePageQuery {
+    layout: allMarkdownRemark(limit: 1, filter: {fields: {slug: {eq: "/"}}}) {
       nodes {
         fields {
           frontmattermd {
@@ -43,6 +45,18 @@ export const homePageQuery = graphql`
         html
       }
     }
-  }  
+    
+    entries: allMarkdownRemark(limit: 6, filter: {frontmatter: {templateKey: {regex: "/entry/"}}}, sort: {order: DESC, fields: frontmatter___created}) {
+      nodes {
+        frontmatter {
+          title
+          blurb
+          created
+          tags
+        }
+      }
+    } 
+  }
 `;
+
 
