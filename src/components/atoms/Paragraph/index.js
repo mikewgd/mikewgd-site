@@ -8,6 +8,10 @@ export default styled.p`
     margin-bottom: 0;
   }
 
+  ${props => props.lineHeight && css`
+    line-height: ${props.lineHeight};
+  `}
+
   ${props => props.fontWeight && css`
     font-weight: ${props.fontWeight};
   `};

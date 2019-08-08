@@ -3,7 +3,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
-import { PageTemplate, Heading } from 'components';
+import { PageTemplate, Heading, EntryCardList, EntryCard } from 'components';
 import { renderMarkdown } from '../utils/renderMarkdown';
 
 const transform = {
@@ -13,18 +13,31 @@ const transform = {
 const Home = ({ data }) => {
   const { html, fields } = data.layout.nodes[0];
   const { pageHeader } = fields.frontmattermd;
-  console.log(data.entries)
+  const entries = data.entries.nodes.map(item => {
+    const { frontmatter } = item;
+    const { slug } = item.fields;
+
+    return {
+      ...frontmatter,
+      slug
+    }
+  });
 
   return (
     <PageTemplate>
       <Heading.H1
         maxWidth="540px"
-        margin="22px auto"
+        margin="30px auto"
         desktopMargin="52px auto"
       >
         {renderMarkdown(pageHeader.html)}
       </Heading.H1>
       {convert(html, { transform })}
+      <EntryCardList>
+        {entries.map(entry => (
+          <EntryCard key={entry.slug} {...entry} />
+        ))}
+      </EntryCardList>
     </PageTemplate>
   )
 };
@@ -51,8 +64,10 @@ export const homePageQuery = graphql`
         frontmatter {
           title
           blurb
-          created
           tags
+        }
+        fields {
+          slug
         }
       }
     } 

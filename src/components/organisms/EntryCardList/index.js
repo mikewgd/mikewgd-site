@@ -3,9 +3,14 @@ import React from 'react';
 import { EntryCard } from 'components';
 import { EntryCardList } from './index.css';
 
-const EntryCardListComponent = ({}) => {
+const EntryCardListComponent = ({
+  children
+}) => {
+  console.log(children.length)
   return (
-    <EntryCardList></EntryCardList>
+    <EntryCardList>
+      {children}
+    </EntryCardList>
   )
 };
 
