@@ -1,5 +1,6 @@
 ---
-templateKey: PortfolioPage/index.js
-pageHeader: test entry
+pageHeader: |-
+  My Portfolio.\
+  A collection of some projects I have worked on.
 ---
 
