@@ -1,4 +1,5 @@
 import React from 'react';
+import { Location } from '@reach/router';
 
 import { Header, Logo } from './index.css';
 import { PrimaryNavigation } from 'components';
@@ -6,7 +7,11 @@ import { PrimaryNavigation } from 'components';
 const HeaderComponent = () => (
   <Header>
     <Logo>mikewgd.com</Logo>
-    <PrimaryNavigation />
+    <Location>
+      {({ location, navigate }) => (
+        <PrimaryNavigation location={location} changeRoute={navigate} />
+      )}
+    </Location>
   </Header>
 );
 

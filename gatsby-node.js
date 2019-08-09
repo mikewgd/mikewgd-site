@@ -10,48 +10,49 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   })
 }
 
-// exports.createPages = ({ actions, graphql }) => {
-//   const { createPage } = actions;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
-//   return graphql(`
-//     {
-//       allMarkdownRemark(limit: 1000) {
-//         edges {
-//           node {
-//             id
-//             fields {
-//               slug
-//             }
-//             frontmatter {
-//               templateKey
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `).then(result => {
-//     if (result.errors) {
-//       result.errors.forEach(e => console.error(e.toString()))
-//       return Promise.reject(result.errors)
-//     }
+  return graphql(`
+    {
+      allMarkdownRemark(filter: {frontmatter: {templateKey: {regex: "/entry/"}}}, sort: {order: DESC, fields: frontmatter___created}) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `).then(result => {
+    if (result.errors) {
+      result.errors.forEach(e => console.error(e.toString()))
+      return Promise.reject(result.errors)
+    }
 
-//     const posts = result.data.allMarkdownRemark.edges
+    const entries = result.data.allMarkdownRemark.nodes.map(item => {
+      const { id } = item;
+      const { slug } = item.fields;
+  
+      return {
+        id,
+        slug
+      }
+    });
 
-//     posts.forEach(edge => {
-//       const id = edge.node.id;
-//       createPage({
-//         path: edge.node.fields.slug,
-//         component: path.resolve(
-//           `src/pages/${String(edge.node.frontmatter.templateKey)}`
-//         ),
-//         // additional data can be passed via context
-//         context: {
-//           id,
-//         },
-//       })
-//     })
-//   });
-// };
+    entries.forEach(entry => {
+      const { id, slug } = entry;
+      createPage({
+        path: slug,
+        component: path.resolve(`src/pages/portfolio/entry.js`),
+        context: {
+          id,
+        },
+      })
+    })
+
+  });
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

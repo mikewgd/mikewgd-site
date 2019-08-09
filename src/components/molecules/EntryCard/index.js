@@ -9,11 +9,17 @@ const EntryCardComponent = ({
   tags,
   slug,
 }) => (
-  <EntryCard>
+  <EntryCard href={slug}>
     <Heading.H3 margin="0 0 2px 0">
-      <Anchor href={slug}>{title}</Anchor>
+      {title}
     </Heading.H3>
-    <Paragraph margin="0 0 12px 0" fontSize="12px" lineHeight="16px">{blurb}</Paragraph>
+    <Paragraph
+      margin="0 0 12px 0"
+      fontSize="12px"
+      lineHeight="16px"
+    >
+      {blurb}
+    </Paragraph>
     {tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
   </EntryCard>
 );

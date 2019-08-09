@@ -22,9 +22,18 @@ const ROUTES = [
   }
 ];
 
-const PrimaryNavigation = () => {
-  const [toggleState, setToggleState] = useToggle(false);
+const isNavLinkActive = (routePath, path) => {
+  let result = false;
 
+  if (routePath === path || routePath === '/portfolio' && path.includes('portfolio')) {
+    result = true;
+  }
+  return result;
+}
+
+const PrimaryNavigation = ({ location, changeRoute }) => {
+  const [toggleState, setToggleState] = useToggle(false);
+  console.log(location);
   return (
     <React.Fragment>
       <Hamburger
@@ -38,8 +47,11 @@ const PrimaryNavigation = () => {
         {ROUTES.map(route => (
           <NavLink
             key={route.id}
-            href={route.path}
-            activeClassName="active"
+            href="#"
+            handleClick={() => {
+              changeRoute(route.path)
+            }}
+            isActive={isNavLinkActive(route.path, location.pathname)}
           >
             {route.text}
           </NavLink>

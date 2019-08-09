@@ -48,9 +48,15 @@ export const NavLink = styled(Anchor)`
   letter-spacing: 8%;
   display: block;
   position: static;
-  color: ${Color.DARK_LIVER};
   transition: background-color .3s ease-in-out;
   text-transform: uppercase;
+  color: ${props => props.isActive ? Color.LICORICE : Color.DARK_LIVER};
+
+  ${props => props.isActive && css`
+    &:after {
+      animation: ${widthIncrease} .3s ease forwards;
+    }
+  `}
 
   &:visited {
     color: ${Color.DARK_LIVER};
@@ -58,14 +64,6 @@ export const NavLink = styled(Anchor)`
 
   &:hover {
     background-color: rgba(255, 255, 255, .1);
-  }
-
-  &.active {
-    color: ${Color.LICORICE};
-
-    &:after {
-      animation: ${widthIncrease} .3s ease forwards;
-    }
   }
 
   ${media.md`

@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 
+import { Anchor, Heading, Paragraph } from 'components';
 import * as Color from '../../../styles/colors';
 
-export const EntryCard = styled.div``;
+export const EntryCard = styled(Anchor)`
+  background-color: #EEEE;
+  padding: 10px;
+  display: block;
+
+  p {
+    color: ${Color.LICORICE};
+  }
+`;
 
 export const Tag = styled.span`
   font-size: 10px;
