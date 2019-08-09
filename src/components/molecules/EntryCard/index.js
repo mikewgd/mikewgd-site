@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Anchor, Heading, Paragraph } from 'components';
-import { EntryCard, Tag } from './index.css';
+import { Heading, Paragraph, Tag } from 'components';
+import { EntryCard } from './index.css';
 
 const EntryCardComponent = ({
   title,
