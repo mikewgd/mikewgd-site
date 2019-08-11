@@ -2,15 +2,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 // import { Helmet } from "react-helmet"
 import convert from 'htmr';
+import styled from 'styled-components';
 
 import { PageTemplate, Paragraph, Heading, Tag, EntryMedia } from 'components';
-import { TagLabel } from './index.css';
 import { Button } from '../../styles/buttons';
 import * as Color from '../../styles/colors';
 
 const transform = {
   p: Paragraph,
 };
+
+const TagLabel = styled.span`
+  display: inline-block;
+  margin-right: 10px;
+`;
 
 const PortfolioEntry = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
