@@ -1,6 +1,6 @@
 ---
 templateKey: src/pages/portfolio/entry.js
-title: Converse
+title: Converse prototype
 blurb: Complete redesign prototype of Converse's website.
 tags:
   - jQuery
