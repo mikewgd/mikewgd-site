@@ -6,7 +6,7 @@ const AnchorStyles = css`
   &,
   &:active,
   &:visited {
-    color: ${Color.PORTLAND_ORANGE};
+    color: ${props => props.color || Color.PORTLAND_ORANGE};
     text-decoration: none;
   }
 

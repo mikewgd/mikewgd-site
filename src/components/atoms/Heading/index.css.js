@@ -47,7 +47,7 @@ export const H1 = styled.h1`
   }
 
   ${media.md`
-    font-size: 28px;
+    font-size: 26px;
     margin: ${props => props.desktopMargin || 0};
     padding-left: 24px;
   `};
@@ -57,7 +57,8 @@ export const H2 = styled.h2`
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.04em;
-  color: ${Color.DARK_LIVER};
+  color: ${props => props.color || Color.DARK_LIVER};
+  margin: ${props => props.margin || "14px 0"};
 `;
 
 export const H3 = styled.h3`

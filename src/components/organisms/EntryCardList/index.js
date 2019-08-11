@@ -4,11 +4,16 @@ import { EntryCard } from 'components';
 import { EntryCardList } from './index.css';
 
 const EntryCardListComponent = ({
-  children
+  children,
+  margin,
+  desktopMargin,
 }) => {
   console.log(children.length)
   return (
-    <EntryCardList>
+    <EntryCardList
+      margin={margin}
+      desktopMargin={desktopMargin}
+    >
       {children}
     </EntryCardList>
   )
