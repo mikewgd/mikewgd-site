@@ -2,7 +2,7 @@
 templateKey: src/pages/portfolio/entry.js
 title: Google Privacy
 blurb: Dedication to keeping data private and updated security.
-entryUrl: 'https://privacy.google.com/'
+entryUrl: ''
 tags:
   - SCSS/CSS
   - Angular
