@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 import * as Color from '../../../styles/colors';
 import { media } from "../../../styles/responsive";
 
-
 export const H1 = styled.h1`
   font-weight: 400;
   border-left: 5px solid ${Color.WELDON_BLUE};

@@ -4,7 +4,13 @@ import { graphql } from 'gatsby';
 import convert from 'htmr';
 import styled from 'styled-components';
 
-import { PageTemplate, Paragraph, Heading, Tag, EntryMedia } from 'components';
+import {
+  PageTemplate,
+  Paragraph,
+  Heading,
+  Tag,
+  EntryMedia,
+} from 'components';
 import { Button } from '../../styles/buttons';
 import * as Color from '../../styles/colors';
 

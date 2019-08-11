@@ -1,7 +1,10 @@
 import React from 'react';
 import { Location } from '@reach/router';
 
-import { Header, Logo } from './index.css';
+import {
+  Header,
+  Logo,
+} from './index.css';
 import { PrimaryNavigation } from 'components';
 
 const HeaderComponent = () => (

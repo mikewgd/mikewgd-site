@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { Navigation, NavLink, Hamburger, Line } from './index.css';
+import {
+  Navigation,
+  NavLink,
+  Hamburger,
+  Line,
+} from './index.css';
 import { ROUTE } from '../../../constants/routes';
 import { useToggle } from '../../../hooks/useToggle';
 
@@ -25,7 +30,7 @@ const ROUTES = [
 const isNavLinkActive = (routePath, path) => {
   let result = false;
 
-  if (routePath === path || routePath === '/portfolio' && path.includes('portfolio')) {
+  if ((routePath === path || routePath === '/portfolio') && path.includes('portfolio')) {
     result = true;
   }
   return result;

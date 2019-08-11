@@ -1,9 +1,13 @@
-/* eslint-disable */
 import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
-import { PageTemplate, Heading, EntryCardList, EntryCard } from 'components';
+import {
+  PageTemplate,
+  Heading,
+  EntryCardList,
+  EntryCard,
+} from 'components';
 import { renderMarkdown } from '../utils/renderMarkdown';
 
 const transform = {
@@ -59,7 +63,7 @@ export const homePageQuery = graphql`
       }
     }
     
-    entries: allMarkdownRemark(limit: 6, filter: {frontmatter: {templateKey: {regex: "/entry/"}}}, sort: {order: DESC, fields: frontmatter___created}) {
+    entries: allMarkdownRemark(limit: 3, filter: {frontmatter: {templateKey: {regex: "/entry/"}}}, sort: {order: DESC, fields: frontmatter___created}) {
       nodes {
         frontmatter {
           title

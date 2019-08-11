@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Anchor, Heading, Paragraph } from 'components';
+import { Anchor } from 'components';
 import * as Color from '../../../styles/colors';
 
 export const EntryCard = styled(Anchor)`

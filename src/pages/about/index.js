@@ -2,7 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
-import { PageTemplate, Paragraph, Heading, SocialLinks } from 'components';
+import {
+  PageTemplate,
+  Paragraph,
+  Heading,
+  SocialLinks,
+} from 'components';
 import { renderMarkdown } from '../../utils/renderMarkdown';
 
 const transform = {

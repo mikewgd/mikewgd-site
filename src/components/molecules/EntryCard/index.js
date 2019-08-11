@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Heading, Paragraph, Tag } from 'components';
+import {
+  Heading,
+  Paragraph,
+  Tag,
+} from 'components';
 import { EntryCard } from './index.css';
 
 const EntryCardComponent = ({

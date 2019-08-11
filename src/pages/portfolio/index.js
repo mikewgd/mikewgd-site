@@ -1,12 +1,17 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import { PageTemplate, EntryCardList, EntryCard, Heading } from 'components';
+import {
+  PageTemplate,
+  EntryCardList,
+  EntryCard,
+  // Heading,
+} from 'components';
 // import { renderMarkdown } from '../../utils/renderMarkdown';
 
 const Portfolio =  ({ data }) => {
   console.log(data)
-  const { fields } = data.layout.nodes[0];
+  // const { fields } = data.layout.nodes[0];
   // const { pageHeader } = fields.frontmattermd;
   const entries = data.entries.nodes.map(item => {
     const { frontmatter } = item;

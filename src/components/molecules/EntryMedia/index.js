@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { Heading } from 'components';
-import { EntryMedia, MediaLink, PlayButton, LinkOut } from './index.css';
+import {
+  EntryMedia,
+  MediaLink,
+  PlayButton,
+  LinkOut,
+} from './index.css';
 
 const EntryMediaComponent = ({ title, media }) => (
   <EntryMedia>
