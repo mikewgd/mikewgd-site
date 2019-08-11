@@ -37,9 +37,9 @@ const PortfolioEntry = ({ data }) => {
       {convert(html, { transform })}
       <Paragraph margin="23px 0 48px 0">
         <TagLabel>Technology Used:</TagLabel>
-        {tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
+        {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
       </Paragraph>
-      {media.length &&
+      {media &&
         <EntryMedia 
           media={media} 
           title={title}
