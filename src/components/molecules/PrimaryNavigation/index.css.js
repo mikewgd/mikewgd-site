@@ -70,6 +70,7 @@ export const NavLink = styled(Anchor)`
     position: relative;
     line-height: 22px;
     padding: 0 6px;
+    margin: auto;
 
     &:after {
       content: '';

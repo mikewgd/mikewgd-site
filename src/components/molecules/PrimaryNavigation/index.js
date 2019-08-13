@@ -30,7 +30,7 @@ const ROUTES = [
 const isNavLinkActive = (routePath, path) => {
   let result = false;
 
-  if ((routePath === path || routePath === '/portfolio') && path.includes('portfolio')) {
+  if (routePath === path || (routePath === '/portfolio' && path.includes('portfolio'))) {
     result = true;
   }
   return result;

@@ -10,6 +10,7 @@ export const Header = styled.header`
   
   ${media.md`
     grid-row-gap: 6px;
+    grid-template-columns: 1.5fr 1fr;
   `};
 `;
 
@@ -40,8 +41,13 @@ export const Logo = styled.div`
   }
 
   ${media.md`
-    font-size: 72px;
     line-height: 84px;
     grid-row: 1;
+    text-align: left;
+    font-size: 56px;
   `};
+
+  ${media.lg`
+    font-size: 66px;
+  `}
 `;

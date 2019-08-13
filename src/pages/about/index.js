@@ -23,7 +23,8 @@ const About = ({ data }) => {
     <PageTemplate>
       <Heading.H1
         margin="22px auto"
-        desktopMargin="30px auto"
+        desktopMargin="30px 0 40px 0"
+        maxWidth="700px"
       >
         {renderMarkdown(pageHeader.html)}
       </Heading.H1>

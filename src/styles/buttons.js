@@ -7,10 +7,10 @@ export const Button = styled(Anchor)`
   display: inline-block;
   background-color: ${Color.PORTLAND_ORANGE};
   color: ${Color.BABY_POWDER};
-  line-height: 16px;
-  font-size: 12px;
+  line-height: 13px;
+  font-size: 16px;
   font-weight: 700;
-  padding: 6px 20px;
+  padding: 14px 26px;
   text-decoration: none;
   text-transform: uppercase;
 

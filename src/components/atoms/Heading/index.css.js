@@ -46,9 +46,13 @@ export const H1 = styled.h1`
   }
 
   ${media.md`
-    font-size: 26px;
+    font-size: 34px;
     margin: ${props => props.desktopMargin || 0};
     padding-left: 24px;
+
+    ${props => props.maxWidthDesktop && css`
+      max-width: ${props.maxWidthDesktop};
+    `};
   `};
 `;
 

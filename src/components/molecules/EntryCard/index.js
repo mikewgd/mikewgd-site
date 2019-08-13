@@ -19,8 +19,8 @@ const EntryCardComponent = ({
     </Heading.H3>
     <Paragraph
       margin="0 0 12px 0"
-      fontSize="12px"
-      lineHeight="16px"
+      fontSize="14px"
+      lineHeight="18px"
     >
       {blurb}
     </Paragraph>

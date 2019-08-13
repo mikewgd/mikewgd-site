@@ -31,8 +31,9 @@ const Home = ({ data }) => {
     <PageTemplate>
       <Heading.H1
         maxWidth="540px"
+        maxWidthDesktop="700px"
         margin="30px auto"
-        desktopMargin="52px auto"
+        desktopMargin="40px 0 50px 0"
       >
         {renderMarkdown(pageHeader.html)}
       </Heading.H1>

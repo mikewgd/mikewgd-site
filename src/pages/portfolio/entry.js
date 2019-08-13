@@ -33,7 +33,7 @@ const PortfolioEntry = ({ data }) => {
   } = frontmatter;
   
   return (
-    <PageTemplate>
+    <PageTemplate maxWidth="800px">
       <Heading.H1
         margin="23px 0"
         desktopMargin="30px 0 16px 0"

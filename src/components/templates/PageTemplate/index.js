@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
@@ -18,9 +18,16 @@ const fadeIn = keyframes`
 export const Main = styled.main`
   opacity: 0;
   animation: ${fadeIn} .5s ease forwards;
+
+  ${props => props.maxWidth && css`
+    max-width: ${props.maxWidth};
+  `}
 `;
 
-const PageTemplate = ({ children }) => (
+const PageTemplate = ({
+  children,
+  maxWidth,
+}) => (
   <Container>
     <StaticQuery
       query={query}
@@ -41,7 +48,7 @@ const PageTemplate = ({ children }) => (
     />
     <GlobalStyle />
     <Header />
-    <Main>
+    <Main maxWidth={maxWidth}>
       {children}
     </Main>
   </Container>
