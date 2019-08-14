@@ -4,5 +4,4 @@ pageHeader: >-
   [software engineer](/portfolio) at
   [Allergan](https://linkedin.com/in/mikelevy).
 ---
-
-## Featured Projects
+## My Work
