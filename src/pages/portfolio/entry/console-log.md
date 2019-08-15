@@ -7,7 +7,8 @@ tags:
   - Vanilla JS
 media:
   - mediaType: video
-    mediaUrl: ''
+    mediaUrl: >-
+      https://res.cloudinary.com/dgjsyaqlh/video/upload/v1565780224/console-log_uhyu5l.mp4
     thumb: >-
       https://res.cloudinary.com/dgjsyaqlh/image/upload/v1565784124/console-log_wkbrnu.png
 created: 2019-08-06T01:49:12.970Z
