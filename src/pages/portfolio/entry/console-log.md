@@ -6,7 +6,8 @@ entryUrl: 'https://console.mikewgd.com'
 tags:
   - Vanilla JS
 media:
-  - mediaType: video
+  - caption: Demo using the tool on an iPhone.
+    mediaType: video
     mediaUrl: >-
       https://res.cloudinary.com/dgjsyaqlh/video/upload/v1565780224/console-log_uhyu5l.mp4
     thumb: >-
