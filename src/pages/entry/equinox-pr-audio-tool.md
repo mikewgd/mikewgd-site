@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/entry.js
+templateKey: entry
 title: Running Audio Tool
 blurb: 'A custom audio tool that allows authors to add, edit and tag classes.'
 tags:

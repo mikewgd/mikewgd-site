@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/entry.js
+templateKey: entry
 title: Socially Driven
 blurb: >-
   A microsite that builds a slideshow from Instagram images based on your city's

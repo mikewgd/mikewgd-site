@@ -3,6 +3,12 @@ backend:
   branch: dev
   repo: mikewgd/mikewgd
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dgjsyaqlh
+    api_key: 598328843357324
+
 media_folder: static/img
 public_folder: /img
 
@@ -20,7 +26,7 @@ collections:
         label: 'Template Key'
         name: 'templateKey'
         widget: 'hidden'
-        default: 'src/pages/portfolio/entry.js'
+        default: 'entry'
       -
         label: Title
         name: title
@@ -87,6 +93,12 @@ collections:
             label: 'Url'
             name: 'mediaUrl'
             widget: string
+            required: false
+          -
+            label: 'Caption'
+            name: caption
+            widget: markdown
+            required: false
       -
         label: 'Created'
         name: 'created'
@@ -95,16 +107,6 @@ collections:
     label: Pages
     name: pages
     files:
-      - 
-        label: 'Portfolio Page'
-        name: portfolio
-        file: src/pages/portfolio/index.md
-        slug: '/portfolio'
-        fields:
-          -
-            label: 'Page Header'
-            name: pageHeader
-            widget: markdown
       -
         label: 'About Page'
         name: about

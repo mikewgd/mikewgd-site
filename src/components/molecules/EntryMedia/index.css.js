@@ -14,7 +14,11 @@ export const MediaLink = styled(Anchor)`
   }
 `;
 
-export const EntryMedia = styled.div``;
+export const EntryMedia = styled.div`
+  img {
+    max-width: 100%;
+  }
+`;
 
 export const PlayButton = styled.div`
   position: absolute;

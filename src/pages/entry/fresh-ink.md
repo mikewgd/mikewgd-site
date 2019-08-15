@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/entry.js
+templateKey: entry
 title: Fresh Ink
 blurb: A web app that allows people to create their own designs on Note 8's S Pen.
 tags:

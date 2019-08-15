@@ -1,29 +1,37 @@
 import React from 'react';
 
-import { Heading } from 'components';
+import { Heading, VideoPlayer } from 'components';
 import {
   EntryMedia,
   MediaLink,
   PlayButton,
   LinkOut,
 } from './index.css';
+import { renderUrl } from '../../../utils/renderCloudinaryUrl';
+
+const renderMediaType = item => {
+  const { mediaType, thumb, mediaUrl } = item;
+
+  switch(mediaType) {
+    case 'video':
+      return (
+        <VideoPlayer
+          source={mediaUrl}
+          poster={thumb}
+        />
+      );
+    case 'article':
+      return (<div></div>);
+    default:
+      return (<div></div>);
+  };
+
+  return null;
+}
 
 const EntryMediaComponent = ({ title, media }) => (
   <EntryMedia>
-    <Heading.H2
-      color="#000"
-      margin="0 0 12px"
-    >
-      Media
-    </Heading.H2>
-
-    {media.map(item => (
-      <MediaLink key={item.mediaUrl} href={item.mediaUrl}>
-        {item.mediaType === 'video' && <PlayButton />}
-        {item.mediaType === 'article' && <LinkOut />}
-        <img src={item.thumb} alt={title} />
-      </MediaLink>
-    ))}
+    {media.map(item => renderMediaType(item))}
   </EntryMedia>
 );
 

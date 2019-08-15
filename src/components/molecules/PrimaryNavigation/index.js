@@ -12,7 +12,7 @@ import { useToggle } from '../../../hooks/useToggle';
 const ROUTES = [
   {
     id: 'home',
-    text: 'Home',
+    text: 'Work',
     path: ROUTE.HOME
   },
   {
@@ -20,11 +20,6 @@ const ROUTES = [
     text: 'About',
     path: ROUTE.ABOUT
   },
-  {
-    id: 'portfolio',
-    text: 'Portfolio',
-    path: ROUTE.PORTFOLIO
-  }
 ];
 
 const isNavLinkActive = (routePath, path) => {

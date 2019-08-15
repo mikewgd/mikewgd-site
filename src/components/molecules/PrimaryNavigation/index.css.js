@@ -34,7 +34,7 @@ export const Navigation = styled.nav`
     background: none;
     position: static;
     padding: 0;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(2, min-content);
     grid-column-gap: 42px;
     justify-content: center;
     transform: none;

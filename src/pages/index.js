@@ -64,7 +64,7 @@ export const homePageQuery = graphql`
       }
     }
     
-    entries: allMarkdownRemark(limit: 3, filter: {frontmatter: {templateKey: {regex: "/entry/"}}}, sort: {order: DESC, fields: frontmatter___created}) {
+    entries: allMarkdownRemark(filter: {frontmatter: {templateKey: {regex: "/entry/"}}}) {
       nodes {
         frontmatter {
           title

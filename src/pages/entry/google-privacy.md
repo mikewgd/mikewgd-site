@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/entry.js
+templateKey: entry
 title: Google Privacy
 blurb: Dedication to keeping data private and updated security.
 entryUrl: ''

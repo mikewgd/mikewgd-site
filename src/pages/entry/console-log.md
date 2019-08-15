@@ -1,5 +1,5 @@
 ---
-templateKey: src/pages/portfolio/entry.js
+templateKey: entry
 title: Console Log
 blurb: Displaying the console log on a mobile device.
 entryUrl: 'https://console.mikewgd.com'

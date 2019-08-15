@@ -44,7 +44,7 @@ exports.createPages = ({ actions, graphql }) => {
       const { id, slug } = entry;
       createPage({
         path: slug,
-        component: path.resolve(`src/pages/portfolio/entry.js`),
+        component: path.resolve(`src/pages/entry/index.js`),
         context: {
           id,
         },
