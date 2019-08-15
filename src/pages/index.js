@@ -38,11 +38,10 @@ const Home = ({ data }) => {
         {renderMarkdown(pageHeader.html)}
       </Heading.H1>
       {convert(html, { transform })}
-      <EntryCardList>
-        {entries.map(entry => (
-          <EntryCard key={entry.slug} {...entry} />
-        ))}
-      </EntryCardList>
+      <EntryCardList
+        entries={entries}
+        margin="22px 0 0 0"
+      />
     </PageTemplate>
   )
 };
