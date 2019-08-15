@@ -8,10 +8,7 @@ tags:
   - Node
   - Paper
   - Webpack
-media:
-  - mediaType: article
-    mediaUrl: 'https://www.rga.com/work/case-studies/fresh-ink'
-    thumb: /img/freshink.png
+media: []
 created: 2019-08-08T12:02:38.851Z
 ---
 A web app that shows off the capabilities of the Samsung Note 8’s S Pen and allows people to create their own designs and customize them with a variety of different colors and brushes.
