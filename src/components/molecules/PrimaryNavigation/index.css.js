@@ -52,11 +52,11 @@ export const NavLink = styled(Anchor)`
   text-transform: uppercase;
   color: ${props => props.isActive ? Color.LICORICE : Color.DARK_LIVER};
 
-  ${props => props.isActive && css`
+  &.active {
     &:after {
       animation: ${widthIncrease} .3s ease forwards;
     }
-  `}
+  }
 
   &:visited {
     color: ${Color.DARK_LIVER};
