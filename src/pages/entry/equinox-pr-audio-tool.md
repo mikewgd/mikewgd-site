@@ -9,10 +9,7 @@ tags:
   - Contentful
   - Webpack
   - ES6
-media:
-  - mediaType: video
-    mediaUrl: 'https://mikelevy.s3.amazonaws.com/eqaudiotool.mp4'
-    thumb: /img/eqaudiotool.png
+media: []
 created: 2019-08-07T11:36:56.005Z
 ---
 A custom audio tool built into **Contentful** that allows authors to add, edit and tag classes. The tagged audio files is outputted as JSON and is then consumed by the Equinox iOS app to show class list views and data visualizations.
