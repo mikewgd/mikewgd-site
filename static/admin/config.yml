@@ -16,7 +16,7 @@ collections:
   -
     name: entries
     label: 'Portfolio Entry'
-    folder: src/pages/portfolio/entry
+    folder: src/pages/entry
     create: true
     slug: '{{title}}'
     editor:
