@@ -11,6 +11,8 @@ module.exports = {
     description: 'The portfolio website for Michael Levy.',
   },
   plugins: [
+    'gatsby-plugin-eslint',
+    'gatsby-plugin-flow',
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,

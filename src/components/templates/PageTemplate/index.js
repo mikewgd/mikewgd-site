@@ -1,10 +1,12 @@
+// @flow
 import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
+/* eslint-disable import/no-unresolved */
+import { Header } from 'components';
 
 import { GlobalStyle, Container } from '../../../styles/global';
-import { Header } from 'components';
 
 const fadeIn = keyframes`
   0% {
@@ -24,10 +26,25 @@ export const Main = styled.main`
   `}
 `;
 
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }  
+`;
+type Props = {
+  children: Node,
+  maxWidth: String,
+};
+
 const PageTemplate = ({
   children,
   maxWidth,
-}) => (
+}: Props) => (
   <Container>
     <StaticQuery
       query={query}
@@ -55,14 +72,3 @@ const PageTemplate = ({
 );
 
 export default PageTemplate;
-
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }  
-`;

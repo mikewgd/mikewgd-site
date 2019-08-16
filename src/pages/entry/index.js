@@ -1,9 +1,11 @@
+// @flow
 import React from 'react';
 import { graphql } from 'gatsby';
 // import { Helmet } from "react-helmet"
 import convert from 'htmr';
 import styled from 'styled-components';
 
+/* eslint-disable import/no-unresolved */
 import {
   PageTemplate,
   Paragraph,
@@ -23,7 +25,11 @@ const TagLabel = styled.span`
   margin-right: 10px;
 `;
 
-const PortfolioEntry = ({ data }) => {
+type Props = {
+  data: Object,
+};
+
+const PortfolioEntry = ({ data }: Props) => {
   const { html, frontmatter } = data.markdownRemark;
   const {
     entryUrl,
@@ -31,7 +37,7 @@ const PortfolioEntry = ({ data }) => {
     tags,
     title,
   } = frontmatter;
-  
+
   return (
     <PageTemplate maxWidth="800px">
       <Heading.H1
@@ -45,13 +51,13 @@ const PortfolioEntry = ({ data }) => {
         <TagLabel>Technology Used:</TagLabel>
         {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
       </Paragraph>
-      {media &&
-        <EntryMedia 
-          media={media} 
+      {media && (
+        <EntryMedia
+          media={media}
           title={title}
         />
-      }
-      {entryUrl && 
+      )}
+      {entryUrl && (
         <Button
           href={entryUrl}
           margin="40px 0 0"
@@ -59,10 +65,10 @@ const PortfolioEntry = ({ data }) => {
         >
           Visit Site
         </Button>
-      }
+      )}
     </PageTemplate>
-  )
-}
+  );
+};
 
 export default PortfolioEntry;
 
@@ -73,14 +79,28 @@ export const portfolioEntryQuery = graphql`
       frontmatter {
         entryUrl
         title
-        media {
-          mediaType
-          mediaUrl
-          thumb
-        }
         tags
       }
       html
     }
   }
 `;
+
+// export const portfolioEntryQuery = graphql`
+//   query EntryPage($id: String) {
+//     markdownRemark(id: {eq: $id}) {
+//       id
+//       frontmatter {
+//         entryUrl
+//         title
+//         media {
+//           mediaType
+//           mediaUrl
+//           thumb
+//         }
+//         tags
+//       }
+//       html
+//     }
+//   }
+// `;

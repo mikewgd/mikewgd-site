@@ -1,7 +1,8 @@
 import styled, { css, keyframes } from 'styled-components';
+/* eslint-disable import/no-unresolved */
 import { Anchor } from 'components';
 import * as Color from '../../../styles/colors';
-import { media } from "../../../styles/responsive";
+import { media } from '../../../styles/responsive';
 
 const widthLine = '28px';
 const heightIcon = 18;
@@ -27,7 +28,7 @@ export const Navigation = styled.nav`
   width: 100%;
   padding: 100px 0 17px 0;
   z-index: 1;
-  transform: ${props => props.opened ? 'translateY(0)' : 'translateY(-100%)'};
+  transform: ${props => (props.opened ? 'translateY(0)' : 'translateY(-100%)')};
   transition: transform .2s ease-in-out;
 
   ${media.md`
@@ -50,7 +51,7 @@ export const NavLink = styled(Anchor)`
   position: static;
   transition: background-color .3s ease-in-out;
   text-transform: uppercase;
-  color: ${props => props.isActive ? Color.LICORICE : Color.DARK_LIVER};
+  color: ${props => (props.isActive ? Color.LICORICE : Color.DARK_LIVER)};
 
   &.active {
     &:after {
@@ -134,7 +135,7 @@ export const Hamburger = styled(Anchor)`
   &:focus {
     ${props => !props.active && css`
       & ${Line}:nth-child(1) {
-        transform: translateY(${heightLine / 2 * -1}px);
+        transform: translateY(${(heightLine / 2) * -1}px);
       }
       & ${Line}:nth-child(3) {
         transform: translateY(${heightLine / 2}px);

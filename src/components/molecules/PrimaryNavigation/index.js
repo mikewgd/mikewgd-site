@@ -13,22 +13,22 @@ const ROUTES = [
   {
     id: 'home',
     text: 'Work',
-    path: ROUTE.HOME
+    path: ROUTE.HOME,
   },
   {
     id: 'about',
     text: 'About',
-    path: ROUTE.ABOUT
+    path: ROUTE.ABOUT,
   },
 ];
 
 const PrimaryNavigation = () => {
   const [toggleState, setToggleState] = useToggle(false);
   return (
-    <React.Fragment>
+    <>
       <Hamburger
         active={toggleState}
-        href="#" 
+        href="#"
         handleClick={setToggleState}
       >
         {[0, 1, 2].map(i => <Line key={i} />)}
@@ -44,7 +44,7 @@ const PrimaryNavigation = () => {
           </NavLink>
         ))}
       </Navigation>
-    </React.Fragment>
+    </>
   );
 };
 

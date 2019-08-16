@@ -1,10 +1,12 @@
 import React from 'react';
 
+/* eslint-disable import/no-unresolved */
+import { PrimaryNavigation } from 'components';
+
 import {
   Header,
   Logo,
 } from './index.css';
-import { PrimaryNavigation } from 'components';
 
 const HeaderComponent = () => (
   <Header>

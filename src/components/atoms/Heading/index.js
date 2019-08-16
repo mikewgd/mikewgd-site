@@ -3,7 +3,7 @@ import {
   H2,
   H3,
   H4,
-} from './index.css'
+} from './index.css';
 
 export default {
   H1,

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import * as Color from '../../../styles/colors';
-import { media } from "../../../styles/responsive";
+import { media } from '../../../styles/responsive';
 import logoMe from '../../../img/logo.png';
 
 export const Header = styled.header`

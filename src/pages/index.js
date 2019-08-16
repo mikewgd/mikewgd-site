@@ -1,12 +1,14 @@
+// @flow
 import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
+/* eslint-disable import/no-unresolved */
 import {
   PageTemplate,
   Heading,
   EntryCardList,
-  EntryCard,
+  // EntryCard,
 } from 'components';
 import { renderMarkdown } from '../utils/renderMarkdown';
 
@@ -14,7 +16,11 @@ const transform = {
   h2: Heading.H2,
 };
 
-const Home = ({ data }) => {
+type Props = {
+  data: Object,
+};
+
+const Home = ({ data }: Props) => {
   const { html, fields } = data.layout.nodes[0];
   const { pageHeader } = fields.frontmattermd;
   const entries = data.entries.nodes.map(item => {
@@ -23,8 +29,8 @@ const Home = ({ data }) => {
 
     return {
       ...frontmatter,
-      slug
-    }
+      slug,
+    };
   });
 
   return (
@@ -43,7 +49,7 @@ const Home = ({ data }) => {
         margin="22px 0 0 0"
       />
     </PageTemplate>
-  )
+  );
 };
 
 export default Home;
@@ -77,5 +83,3 @@ export const homePageQuery = graphql`
     } 
   }
 `;
-
-

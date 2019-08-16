@@ -1,5 +1,7 @@
+// @flow
 import React from 'react';
 
+/* eslint-disable import/no-unresolved */
 import {
   Heading,
   Paragraph,
@@ -7,12 +9,19 @@ import {
 } from 'components';
 import { EntryCard } from './index.css';
 
+type Props = {
+  title: String,
+  blurb: String,
+  tags: Array,
+  slug: String,
+};
+
 const EntryCardComponent = ({
   title,
   blurb,
   tags,
   slug,
-}) => (
+}: Props) => (
   <EntryCard href={slug}>
     <Heading.H3 margin="0 0 2px 0">
       {title}

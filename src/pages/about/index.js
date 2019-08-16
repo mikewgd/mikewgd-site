@@ -1,7 +1,9 @@
+// @flow
 import React from 'react';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
+/* eslint-disable import/no-unresolved */
 import {
   PageTemplate,
   Paragraph,
@@ -15,7 +17,11 @@ const transform = {
   p: Paragraph,
 };
 
-const About = ({ data }) => {
+type Props = {
+  data: Object,
+};
+
+const About = ({ data }: Props) => {
   const { html, fields, frontmatter } = data.allMarkdownRemark.nodes[0];
   const { pageHeader } = fields.frontmattermd;
 
@@ -31,7 +37,7 @@ const About = ({ data }) => {
       {convert(html, { transform })}
       <SocialLinks data={frontmatter.socialLinks} />
     </PageTemplate>
-  )
+  );
 };
 
 export default About;

@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import * as Color from '../../../styles/colors';
-import { media } from "../../../styles/responsive";
+import { media } from '../../../styles/responsive';
 
 export const H1 = styled.h1`
   font-weight: 400;
@@ -61,7 +61,7 @@ export const H2 = styled.h2`
   line-height: 21px;
   letter-spacing: 0.04em;
   color: ${props => props.color || Color.DARK_LIVER};
-  margin: ${props => props.margin || "14px 0"};
+  margin: ${props => props.margin || '14px 0'};
 `;
 
 export const H3 = styled.h3`

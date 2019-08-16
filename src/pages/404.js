@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* eslint-disable import/no-unresolved */
 import {
   PageTemplate,
   Paragraph

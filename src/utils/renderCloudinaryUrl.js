@@ -9,7 +9,7 @@ const transformationMapping = {
 };
 
 export const renderUrl = (
-  imageUrl, 
+  imageUrl,
   transforms = {
     aspect_ratio: '16:9',
     background: 'rgb:F4F4F4',
@@ -20,12 +20,13 @@ export const renderUrl = (
 ) => {
   const transformations = [];
   const [base, image] = imageUrl.split('upload/');
-  
-  for (var prop in transforms) {
+  const properties = Object.keys(transforms);
+
+  properties.map(prop => {
     const property = transformationMapping[prop];
     const value = transforms[prop];
-    transformations.push(`${property}_${value}`)
-  }
+    return transformations.push(`${property}_${value}`);
+  });
 
-  return `${base}upload/${transformations.join(',')}/${image.replace('.png', '')}`
-}
+  return `${base}upload/${transformations.join(',')}/${image.replace('.png', '')}`;
+};

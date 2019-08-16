@@ -1,7 +1,9 @@
+/* eslint-disable no-return-assign */
 import React from 'react';
 import convert from 'htmr';
 import styled from 'styled-components';
 
+/* eslint-disable import/no-unresolved */
 import { Anchor } from 'components';
 
 const Br = styled.br``;
@@ -13,12 +15,13 @@ export const renderMarkdown = html => {
       if (typeof props === 'undefined') {
         return node;
       }
-  
-      if (node === 'a') {
+
+      if (node === 'a' && props.href) {
+        const { href } = props;
         return (
           <Anchor
-            key={i++}
-            href={props.href}
+            key={i += 1}
+            href={href}
           >
             {children}
           </Anchor>
@@ -26,12 +29,12 @@ export const renderMarkdown = html => {
       }
 
       if (node === 'br') {
-        return <Br key={i++} />
+        return <Br key={i += 1} />;
       }
-  
+
       return children;
     },
   };
 
-  return convert(html, { transform })
-}
+  return convert(html, { transform });
+};

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
+// @flow
 import React from 'react';
 
 import {
@@ -8,17 +10,23 @@ import {
 const RELATIVE_LINK_REGEX = /^\//;
 const LINK_HANDLER = '#';
 
+type Props = {
+  href: String,
+  children: Node,
+  handleClick: Function,
+};
+
 const AnchorTag = ({
   href,
   children,
   handleClick,
-  ...props,
-}) => {
+  ...props
+}: Props) => {
   // Internal link
   if (RELATIVE_LINK_REGEX.test(href)) {
-    return <RelativeAnchor {...props} to={href}>{children}</RelativeAnchor>
-  } 
-  
+    return <RelativeAnchor {...props} to={href}>{children}</RelativeAnchor>;
+  }
+
   if (href === LINK_HANDLER) {
     return (
       <Anchor
@@ -31,7 +39,7 @@ const AnchorTag = ({
       >
         {children}
       </Anchor>
-    )
+    );
   }
 
   // External link
@@ -45,6 +53,6 @@ const AnchorTag = ({
       {children}
     </Anchor>
   );
-}
+};
 
 export default AnchorTag;

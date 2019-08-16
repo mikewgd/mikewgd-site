@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 
 import {
@@ -6,10 +7,15 @@ import {
 } from './index.css';
 import { renderUrl } from '../../../utils/renderCloudinaryUrl';
 
+type Props = {
+  poster: String,
+  source: String,
+};
+
 const VideoPlayer = ({
   poster,
-  source
-}) => (
+  source,
+}: Props) => (
   <VideoContainer>
     <VideoTag
       controls
