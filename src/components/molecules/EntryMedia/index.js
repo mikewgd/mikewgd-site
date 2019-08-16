@@ -2,12 +2,14 @@
 import React from 'react';
 
 import { Heading, VideoPlayer } from 'components';
+
 import {
   EntryMedia,
   MediaLink,
   PlayButton,
   LinkOut,
 } from './index.css';
+
 import { renderUrl } from '../../../utils/renderCloudinaryUrl';
 
 const renderMediaType = item => {

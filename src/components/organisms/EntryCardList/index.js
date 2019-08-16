@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
-/* eslint-disable import/no-unresolved */
+
 import { EntryCard } from 'components';
+
 import { EntryCardList } from './index.css';
 
 type Props = {

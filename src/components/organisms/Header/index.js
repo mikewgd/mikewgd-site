@@ -1,6 +1,5 @@
 import React from 'react';
 
-/* eslint-disable import/no-unresolved */
 import { PrimaryNavigation } from 'components';
 
 import {

@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
-/* eslint-disable import/no-unresolved */
+
 import { Anchor } from 'components';
+
 import * as Color from '../../../styles/colors';
 import { media } from '../../../styles/responsive';
 

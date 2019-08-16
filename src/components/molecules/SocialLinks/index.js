@@ -1,8 +1,10 @@
 // @flow
 import React from 'react';
-/* eslint-disable import/no-unresolved */
+
 import { Anchor } from 'components';
+
 import { SocialLinks } from './index.css';
+
 import Facebook from '../../../img/Facebook.inline.svg';
 import Github from '../../../img/Github.inline.svg';
 import Instagram from '../../../img/Instagram.inline.svg';

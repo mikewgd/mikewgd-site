@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 
-/* eslint-disable import/no-unresolved */
 import {
   Heading,
   Paragraph,
   Tag,
 } from 'components';
+
 import { EntryCard } from './index.css';
 
 type Props = {

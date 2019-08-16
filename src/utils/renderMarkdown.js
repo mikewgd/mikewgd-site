@@ -3,7 +3,6 @@ import React from 'react';
 import convert from 'htmr';
 import styled from 'styled-components';
 
-/* eslint-disable import/no-unresolved */
 import { Anchor } from 'components';
 
 const Br = styled.br``;

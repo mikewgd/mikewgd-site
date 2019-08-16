@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+
 import * as Color from '../../../styles/colors';
 
 const AnchorStyles = css`

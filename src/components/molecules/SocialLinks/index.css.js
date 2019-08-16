@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import * as Color from '../../../styles/colors';
 
 export const SocialLinks = styled.div`

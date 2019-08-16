@@ -3,7 +3,7 @@ import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-/* eslint-disable import/no-unresolved */
+
 import { Header } from 'components';
 
 import { GlobalStyle, Container } from '../../../styles/global';

@@ -5,6 +5,7 @@ import {
   VideoContainer,
   VideoTag,
 } from './index.css';
+
 import { renderUrl } from '../../../utils/renderCloudinaryUrl';
 
 type Props = {

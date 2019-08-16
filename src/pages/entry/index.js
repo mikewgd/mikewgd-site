@@ -5,7 +5,6 @@ import { graphql } from 'gatsby';
 import convert from 'htmr';
 import styled from 'styled-components';
 
-/* eslint-disable import/no-unresolved */
 import {
   PageTemplate,
   Paragraph,
@@ -13,6 +12,7 @@ import {
   Tag,
   EntryMedia,
 } from 'components';
+
 import { Button } from '../../styles/buttons';
 import * as Color from '../../styles/colors';
 
