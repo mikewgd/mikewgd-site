@@ -15,3 +15,5 @@ youtube 23242
 ![test](https://res.cloudinary.com/dgjsyaqlh/image/upload/v1565828821/sample.jpg "teste title")
 
 {"widget":"qards-section-heading","title":"test title","subtitle":"test subtitle"}
+
+<span class="sidenote"><span class="sidenote__toggle">efwef</span><span class="sidenote__note">wefwefawef</span></span>
