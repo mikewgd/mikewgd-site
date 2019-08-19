@@ -3,7 +3,7 @@ import React from 'react';
 import convert from 'htmr';
 import styled from 'styled-components';
 
-import { Anchor } from 'components';
+import { Anchor, Paragraph, EntryMedia } from 'components';
 
 const Br = styled.br``;
 
@@ -13,6 +13,27 @@ export const renderMarkdown = html => {
     _: (node, props, children) => {
       if (typeof props === 'undefined') {
         return node;
+      }
+
+      if (node === 'span' && props.className) {
+        const { thumb, full, type } = props;
+        return (
+          <EntryMedia
+            key={i += 1}
+            thumb={thumb}
+            caption={children[0]}
+            full={full}
+            type={type}
+          />
+        );
+      }
+
+      if (node === 'p') {
+        return (
+          <Paragraph key={i += 1}>
+            {children}
+          </Paragraph>
+        );
       }
 
       if (node === 'a' && props.href) {

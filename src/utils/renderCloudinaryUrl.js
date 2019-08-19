@@ -11,11 +11,7 @@ const transformationMapping = {
 export const renderUrl = (
   imageUrl,
   transforms = {
-    aspect_ratio: '16:9',
-    background: 'rgb:F4F4F4',
     fetch_format: 'auto',
-    crop: 'pad',
-    width: 800,
   }
 ) => {
   const transformations = [];

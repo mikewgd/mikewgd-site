@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-import { Anchor } from 'components';
+import { Anchor, Paragraph } from 'components';
 
 import * as Color from '../../../styles/colors';
 
@@ -16,6 +16,11 @@ export const MediaLink = styled(Anchor)`
 `;
 
 export const EntryMedia = styled.div`
+  ${props => props.maxWidth && css`
+    max-width: ${props.maxWidth}px;
+    margin: 0 auto;
+  `}
+
   img {
     max-width: 100%;
   }
@@ -53,5 +58,19 @@ export const LinkOut = styled.div`
     position: absolute;
     border-left-width: 0;
     border-bottom-width: 0;
+  }
+`;
+
+export const Caption = styled(Paragraph)`
+  font-style: italic;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+
+  a,
+  a:active,
+  a:visited {
+    color: #999;
+    text-decoration: underline;
   }
 `;

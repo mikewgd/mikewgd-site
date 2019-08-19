@@ -1,40 +1,67 @@
+// @flow
 /* eslint-disable */
 import React from 'react';
+import convert from 'htmr';
 
-import { Heading, VideoPlayer } from 'components';
+import { VideoPlayer, Anchor } from 'components';
 
 import {
   EntryMedia,
-  MediaLink,
-  PlayButton,
-  LinkOut,
+  Caption,
 } from './index.css';
 
 import { renderUrl } from '../../../utils/renderCloudinaryUrl';
 
-const renderMediaType = item => {
-  const { mediaType, thumb, mediaUrl } = item;
+const transformation = {
+  crop: 'scale',
+  // aspect_ratio: '16:9',
+  background: 'rgb:F4F4F4',
+  width: 400,
+};
 
-  switch(mediaType) {
+const transform = {
+  a: Anchor,
+};
+
+const renderMediaType = (type, thumb, full) => {
+  switch (type) {
     case 'video':
       return (
         <VideoPlayer
-          source={mediaUrl}
-          poster={thumb}
+          source={full}
+          poster={renderUrl(thumb, transformation)}
         />
       );
     case 'article':
-      return (<div></div>);
+      return (
+        <img src={renderUrl(thumb, transformation)} alt={type} />
+      );
     default:
-      return (<div></div>);
-  };
+      return (<div />);
+  }
+};
 
-  return null;
+const renderCaption = caption => {
+  const reg = new RegExp(/(.*)\[link href="(.*)"\](.*)\[\/link](.*)/);
+  return convert(caption.replace(reg, '$1<a href="$2">$3</a> $4'), { transform });
 }
 
-const EntryMediaComponent = ({ title, media }) => (
-  <EntryMedia>
-    {media.map(item => renderMediaType(item))}
+type Props = {
+  thumb: String,
+  full: String,
+  caption: String,
+  type: String,
+};
+
+const EntryMediaComponent = ({
+  thumb,
+  full,
+  caption,
+  type,
+}: Props) => (
+  <EntryMedia maxWidth={transformation.width}>
+    {renderMediaType(type, thumb, full)}
+    <Caption margin="15px 0 0 0">{renderCaption(caption)}</Caption>
   </EntryMedia>
 );
 

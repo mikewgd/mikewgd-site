@@ -7,35 +7,63 @@ import cloudinary from 'netlify-cms-media-library-cloudinary';
 // import ProductPagePreview from './preview-templates/ProductPagePreview'
 // import IndexPagePreview from './preview-templates/IndexPagePreview'
 
-// CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerEditorComponent({
-  // Internal id of the component
-  id: "youtube",
-  // Visible label
-  label: "Youtube",
-  // Fields the user need to fill out when adding an instance of the component
-  fields: [{name: 'id', label: 'Youtube Video ID', widget: 'string'}],
-  // Pattern to identify a block as being an instance of this component
-  pattern: /^youtube (\S+)$/,
-  // Function to extract data elements from the regexp match
-  fromBlock: function(match) {
-    return {
-      id: match[1]
-    };
-  },
-  // Function to create a text block from an instance of this component
-  toBlock: function(obj) {
-    return 'youtube ' + obj.id;
-  },
-  // Preview output for this component. Can either be a string or a React component
-  // (component gives better render performance)
-  toPreview: function(obj) {
-    return (
-      '<img src="http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" alt="Youtube Video"/>'
-    );
-  }
+  id: 'media',
+  label: 'Media',
+  fields: [
+    {
+      label: 'Thumb',
+      name: 'mediaThumb',
+      widget: 'image',
+      media_library: {
+        config: {
+          multiple: false
+        },
+      }, 
+    },
+    {
+      label: 'Full Media',
+      name: 'mediaFull',
+      widget: 'file',
+      media_library: {
+        config: {
+          multiple: false
+        },
+      }, 
+    },
+    {
+      label: 'Type',
+      name: 'mediaType',
+      widget: 'select',
+      options: [
+        'video',
+        'article',
+        'image',
+      ],
+    },
+    {
+      label: 'Caption',
+      name: 'mediaCaption',
+      widget: 'text',
+    }
+  ],
+
+  pattern: /^<span class="entryMedia" thumb="(.*)" full="(.*)" type="(.*)">(.*)<\/span>/,
+ 
+  fromBlock: match => ({
+    mediaThumb: match[1],
+    mediaFull: match[2],
+    mediaType: match[3],
+    mediaCaption: match[4],
+  }),
+
+  toBlock: obj =>
+    `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
+  
+  toPreview: obj =>
+    `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
 });
 
 // CMS.registerPreviewTemplate('index', IndexPagePreview)

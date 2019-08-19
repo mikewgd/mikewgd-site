@@ -20,7 +20,7 @@ collections:
     create: true
     slug: '{{title}}'
     editor:
-      preview: false
+      preview: true
     fields:
       -
         label: 'Template Key'
@@ -67,38 +67,6 @@ collections:
           - Gulp
           - Vanilla JS
           - PHP
-      -
-        label: 'Media'
-        name: 'media'
-        widget: 'list'
-        required: false
-        fields:
-          -
-            label: Thumb
-            name: 'thumb'
-            widget: file
-            media_library:
-              config:
-                multiple: false
-          -
-            label: 'Type'
-            name: 'mediaType'
-            widget: 'select'
-            options: [
-              'video',
-              'article',
-              'image',
-            ]
-          -
-            label: 'Url'
-            name: 'mediaUrl'
-            widget: string
-            required: false
-          -
-            label: 'Caption'
-            name: caption
-            widget: markdown
-            required: false
       -
         label: 'Created'
         name: 'created'

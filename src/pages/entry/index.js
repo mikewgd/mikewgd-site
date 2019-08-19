@@ -2,7 +2,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 // import { Helmet } from "react-helmet"
-import convert from 'htmr';
 import styled from 'styled-components';
 
 import {
@@ -10,15 +9,11 @@ import {
   Paragraph,
   Heading,
   Tag,
-  EntryMedia,
 } from 'components';
 
+import { renderMarkdown } from '../../utils/renderMarkdown';
 import { Button } from '../../styles/buttons';
 import * as Color from '../../styles/colors';
-
-const transform = {
-  p: Paragraph,
-};
 
 const TagLabel = styled.span`
   display: inline-block;
@@ -33,7 +28,6 @@ const PortfolioEntry = ({ data }: Props) => {
   const { html, frontmatter } = data.markdownRemark;
   const {
     entryUrl,
-    media,
     tags,
     title,
   } = frontmatter;
@@ -44,19 +38,13 @@ const PortfolioEntry = ({ data }: Props) => {
         margin="23px 0"
         desktopMargin="30px 0 16px 0"
       >
-        {title}
+        {title.replace(/^<p>(.*)<\/p>/, '$1')}
       </Heading.H1>
-      {convert(html, { transform })}
+      {renderMarkdown(html)}
       <Paragraph margin="23px 0 48px 0">
         <TagLabel>Technology Used:</TagLabel>
         {tags && tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
       </Paragraph>
-      {media && (
-        <EntryMedia
-          media={media}
-          title={title}
-        />
-      )}
       {entryUrl && (
         <Button
           href={entryUrl}
@@ -85,22 +73,3 @@ export const portfolioEntryQuery = graphql`
     }
   }
 `;
-
-// export const portfolioEntryQuery = graphql`
-//   query EntryPage($id: String) {
-//     markdownRemark(id: {eq: $id}) {
-//       id
-//       frontmatter {
-//         entryUrl
-//         title
-//         media {
-//           mediaType
-//           mediaUrl
-//           thumb
-//         }
-//         tags
-//       }
-//       html
-//     }
-//   }
-// `;

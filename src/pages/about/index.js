@@ -32,7 +32,7 @@ const About = ({ data }: Props) => {
         desktopMargin="30px 0 40px 0"
         maxWidth="700px"
       >
-        {renderMarkdown(pageHeader.html)}
+        {renderMarkdown(pageHeader.html.replace(/^<p>(.*)<\/p>/, '$1'))}
       </Heading.H1>
       {convert(html, { transform })}
       <SocialLinks data={frontmatter.socialLinks} />

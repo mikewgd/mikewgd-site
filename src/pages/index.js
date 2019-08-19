@@ -7,7 +7,6 @@ import {
   PageTemplate,
   Heading,
   EntryCardList,
-  // EntryCard,
 } from 'components';
 
 import { renderMarkdown } from '../utils/renderMarkdown';
@@ -41,7 +40,7 @@ const Home = ({ data }: Props) => {
         margin="30px auto"
         desktopMargin="40px 0 50px 0"
       >
-        {renderMarkdown(pageHeader.html)}
+        {renderMarkdown(pageHeader.html.replace(/^<p>(.*)<\/p>/, '$1'))}
       </Heading.H1>
       {convert(html, { transform })}
       <EntryCardList

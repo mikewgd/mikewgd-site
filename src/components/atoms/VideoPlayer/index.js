@@ -11,15 +11,20 @@ import { renderUrl } from '../../../utils/renderCloudinaryUrl';
 type Props = {
   poster: String,
   source: String,
+  maxWidth: Number,
 };
 
 const VideoPlayer = ({
   poster,
   source,
+  maxWidth,
 }: Props) => (
-  <VideoContainer>
+  <VideoContainer maxWidth={maxWidth}>
     <VideoTag
       controls
+      muted
+      autoPlay
+      loop
       crossOrigin="anonymous"
       preload="auto"
       poster={renderUrl(poster)}
