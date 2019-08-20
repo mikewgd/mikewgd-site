@@ -6,8 +6,8 @@ import styled from 'styled-components';
 
 import {
   PageTemplate,
+  PageHeader,
   Paragraph,
-  Heading,
   Tag,
 } from 'components';
 
@@ -33,13 +33,12 @@ const PortfolioEntry = ({ data }: Props) => {
   } = frontmatter;
 
   return (
-    <PageTemplate maxWidth="800px">
-      <Heading.H1
-        margin="23px 0"
+    <PageTemplate maxWidth="700px">
+      <PageHeader
+        mobileMargin="23px 0"
         desktopMargin="30px 0 16px 0"
-      >
-        {title.replace(/^<p>(.*)<\/p>/, '$1')}
-      </Heading.H1>
+        text={title}
+      />
       {renderMarkdown(html)}
       <Paragraph margin="23px 0 48px 0">
         <TagLabel>Technology Used:</TagLabel>
@@ -48,7 +47,6 @@ const PortfolioEntry = ({ data }: Props) => {
       {entryUrl && (
         <Button
           href={entryUrl}
-          margin="40px 0 0"
           color={Color.BABY_POWDER}
         >
           Visit Site

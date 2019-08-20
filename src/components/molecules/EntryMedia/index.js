@@ -1,5 +1,4 @@
 // @flow
-/* eslint-disable */
 import React from 'react';
 import convert from 'htmr';
 
@@ -44,7 +43,7 @@ const renderMediaType = (type, thumb, full) => {
 const renderCaption = caption => {
   const reg = new RegExp(/(.*)\[link href="(.*)"\](.*)\[\/link](.*)/);
   return convert(caption.replace(reg, '$1<a href="$2">$3</a> $4'), { transform });
-}
+};
 
 type Props = {
   thumb: String,

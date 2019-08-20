@@ -12,8 +12,8 @@ export const H1 = styled.h1`
   line-height: 135%;
   display: block;
 
-  ${props => props.maxWidth && css`
-    max-width: ${props.maxWidth};
+  ${props => props.mobileMaxWidth && css`
+    max-width: ${props.mobileMaxWidth};
   `};
 
   a {
@@ -51,8 +51,8 @@ export const H1 = styled.h1`
     margin: ${props => props.desktopMargin || 0};
     padding-left: 24px;
 
-    ${props => props.maxWidthDesktop && css`
-      max-width: ${props.maxWidthDesktop};
+    ${props => props.desktopMaxWidth && css`
+      max-width: ${props.desktopMaxWidth};
     `};
   `};
 `;

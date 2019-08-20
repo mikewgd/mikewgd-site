@@ -1,11 +1,5 @@
-/* eslint-disable */
 import CMS from 'netlify-cms-app';
 import cloudinary from 'netlify-cms-media-library-cloudinary';
-
-// import AboutPagePreview from './preview-templates/AboutPagePreview'
-// import BlogPostPreview from './preview-templates/BlogPostPreview'
-// import ProductPagePreview from './preview-templates/ProductPagePreview'
-// import IndexPagePreview from './preview-templates/IndexPagePreview'
 
 CMS.registerMediaLibrary(cloudinary);
 
@@ -19,9 +13,9 @@ CMS.registerEditorComponent({
       widget: 'image',
       media_library: {
         config: {
-          multiple: false
+          multiple: false,
         },
-      }, 
+      },
     },
     {
       label: 'Full Media',
@@ -29,9 +23,9 @@ CMS.registerEditorComponent({
       widget: 'file',
       media_library: {
         config: {
-          multiple: false
+          multiple: false,
         },
-      }, 
+      },
     },
     {
       label: 'Type',
@@ -47,11 +41,11 @@ CMS.registerEditorComponent({
       label: 'Caption',
       name: 'mediaCaption',
       widget: 'text',
-    }
+    },
   ],
 
   pattern: /^<span class="entryMedia" thumb="(.*)" full="(.*)" type="(.*)">(.*)<\/span>/,
- 
+
   fromBlock: match => ({
     mediaThumb: match[1],
     mediaFull: match[2],
@@ -59,14 +53,7 @@ CMS.registerEditorComponent({
     mediaCaption: match[4],
   }),
 
-  toBlock: obj =>
-    `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
-  
-  toPreview: obj =>
-    `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
-});
+  toBlock: obj => `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
 
-// CMS.registerPreviewTemplate('index', IndexPagePreview)
-// CMS.registerPreviewTemplate('about', AboutPagePreview)
-// CMS.registerPreviewTemplate('products', ProductPagePreview)
-// CMS.registerPreviewTemplate('blog', BlogPostPreview)
+  toPreview: obj => `<span class="entryMedia" thumb="${obj.mediaThumb}" full="${obj.mediaFull}" type="${obj.mediaType}">${obj.mediaCaption}</span>`,
+});

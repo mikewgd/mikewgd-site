@@ -6,10 +6,12 @@ import styled from 'styled-components';
 import { Anchor, Paragraph, EntryMedia } from 'components';
 
 const Br = styled.br``;
+const Strong = styled.strong``;
 
 export const renderMarkdown = html => {
   let i = 0;
   const transform = {
+    strong: Strong,
     _: (node, props, children) => {
       if (typeof props === 'undefined') {
         return node;

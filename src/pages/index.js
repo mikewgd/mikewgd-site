@@ -5,11 +5,10 @@ import convert from 'htmr';
 
 import {
   PageTemplate,
+  PageHeader,
   Heading,
   EntryCardList,
 } from 'components';
-
-import { renderMarkdown } from '../utils/renderMarkdown';
 
 const transform = {
   h2: Heading.H2,
@@ -34,14 +33,13 @@ const Home = ({ data }: Props) => {
 
   return (
     <PageTemplate>
-      <Heading.H1
-        maxWidth="540px"
-        maxWidthDesktop="700px"
-        margin="30px auto"
+      <PageHeader
+        mobileMaxWidth="540px"
+        desktopMaxWidth="700px"
+        mobileMargin="30px auto"
         desktopMargin="40px 0 50px 0"
-      >
-        {renderMarkdown(pageHeader.html.replace(/^<p>(.*)<\/p>/, '$1'))}
-      </Heading.H1>
+        text={pageHeader.html}
+      />
       {convert(html, { transform })}
       <EntryCardList
         entries={entries}

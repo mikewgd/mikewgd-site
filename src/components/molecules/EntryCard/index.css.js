@@ -8,6 +8,12 @@ export const EntryCard = styled(Anchor)`
   background-color: #EEEE;
   padding: 10px;
   display: block;
+  transition: box-shadow .15s ease-in-out;
+
+  &:active,
+  &:visited {
+    box-shadow: inset 0 0 0px 4px ${Color.PORTLAND_ORANGE};
+  }
 
   p {
     color: ${Color.LICORICE};

@@ -5,12 +5,11 @@ import convert from 'htmr';
 
 import {
   PageTemplate,
+  PageHeader,
   Paragraph,
   Heading,
   SocialLinks,
 } from 'components';
-
-import { renderMarkdown } from '../../utils/renderMarkdown';
 
 const transform = {
   h2: Heading.H2,
@@ -26,14 +25,13 @@ const About = ({ data }: Props) => {
   const { pageHeader } = fields.frontmattermd;
 
   return (
-    <PageTemplate>
-      <Heading.H1
-        margin="22px auto"
+    <PageTemplate maxWidth="700px">
+      <PageHeader
+        mobileMargin="22px auto"
         desktopMargin="30px 0 40px 0"
-        maxWidth="700px"
-      >
-        {renderMarkdown(pageHeader.html.replace(/^<p>(.*)<\/p>/, '$1'))}
-      </Heading.H1>
+        mobileMaxWidth="700px"
+        text={pageHeader.html}
+      />
       {convert(html, { transform })}
       <SocialLinks data={frontmatter.socialLinks} />
     </PageTemplate>
