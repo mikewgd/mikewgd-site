@@ -4,8 +4,8 @@ import { media } from '../../../styles/responsive';
 
 export const EntryCardList = styled.div`
   display: grid;
-  grid-row-gap: 15px;
-  grid-column-gap: 15px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
 
   ${props => props.margin && css`
     margin: ${props.margin};

@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-overflow-scrolling: touch;
     ${ROBOTO_REGULAR}
     font-size: 16px;
-    line-height: 140.6%;
+    line-height: 160%;
 
     &::-webkit-scrollbar {
       width: 12px;

@@ -61,12 +61,18 @@ collections:
           - MySQL
           - jQuery
           - Webpack
+          - Styled Components
+          - Redux
           - Contentful UI Ext
           - Paper   
+          - Saga
           - AWS
           - Gulp
           - Vanilla JS
           - PHP
+          - Netlify
+          - DatoCMS
+          - NetlifyCMS
       -
         label: 'Created'
         name: 'created'

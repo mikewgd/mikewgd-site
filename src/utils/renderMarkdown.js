@@ -23,7 +23,7 @@ export const renderMarkdown = html => {
           <EntryMedia
             key={i += 1}
             thumb={thumb}
-            caption={children[0]}
+            caption={children ? children[0] : false}
             full={full}
             type={type}
           />

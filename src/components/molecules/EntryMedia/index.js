@@ -15,7 +15,7 @@ const transformation = {
   crop: 'scale',
   // aspect_ratio: '16:9',
   background: 'rgb:F4F4F4',
-  width: 400,
+  width: 450,
 };
 
 const transform = {
@@ -36,7 +36,11 @@ const renderMediaType = (type, thumb, full) => {
         <img src={renderUrl(thumb, transformation)} alt={type} />
       );
     default:
-      return (<div />);
+      return (
+        <Anchor href={full}>
+          <img src={renderUrl(thumb, transformation)} alt={type} />
+        </Anchor>
+      );
   }
 };
 
@@ -60,7 +64,11 @@ const EntryMediaComponent = ({
 }: Props) => (
   <EntryMedia maxWidth={transformation.width}>
     {renderMediaType(type, thumb, full)}
-    <Caption margin="15px 0 0 0">{renderCaption(caption)}</Caption>
+    {caption && (
+      <Caption margin="15px 0 0 0">
+        {renderCaption(caption)}
+      </Caption>
+    )}
   </EntryMedia>
 );
 
