@@ -9,6 +9,7 @@ tags:
   - NetlifyCMS
   - ES6
   - Styled Components
+  - Gatsby
 created: 2019-08-21T01:49:22.629Z
 ---
 My portfolio website.
