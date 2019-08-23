@@ -11,7 +11,22 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 }
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+  const fromPaths = [
+    '/entry',
+    '/entry/',
+    '/entry/entry',
+    '/entry/entry/',
+  ];
+
+  fromPaths.map(i =>
+    createRedirect({
+      fromPath: i,
+      isPermanent: true,
+      redirectInBrowser: true,
+      toPath: '/',
+    })
+  );
 
   return graphql(`
     {

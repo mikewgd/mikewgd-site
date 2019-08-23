@@ -73,6 +73,7 @@ collections:
           - Netlify
           - DatoCMS
           - NetlifyCMS
+          - Gatsby
       -
         label: 'Created'
         name: 'created'

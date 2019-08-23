@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import { Header } from 'components';
 
 import { GlobalStyle, Container } from '../../../styles/global';
+import { SEO } from '../../../constants/seo';
 
 const fadeIn = keyframes`
   0% {
@@ -26,16 +26,6 @@ export const Main = styled.main`
   `}
 `;
 
-const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }  
-`;
 type Props = {
   children: Node,
   maxWidth: String,
@@ -46,23 +36,11 @@ const PageTemplate = ({
   maxWidth,
 }: Props) => (
   <Container>
-    <StaticQuery
-      query={query}
-      render={({
-        site: {
-          siteMetadata: {
-            title,
-            description,
-          },
-        },
-      }) => (
-        <Helmet>
-          <title>{title}</title>
-          <meta name="description" content={description} />
-          {/* <meta name="image" content={seo.image} /> */}
-        </Helmet>
-      )}
-    />
+    <Helmet>
+      <title>{SEO.TITLE}</title>
+      <meta name="description" content={SEO.DESCRIPTION} />
+      <meta name="keywords" content={SEO.KEYWORDS.join(',')} />
+    </Helmet>
     <GlobalStyle />
     <Header />
     <Main maxWidth={maxWidth}>
