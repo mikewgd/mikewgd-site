@@ -1,7 +1,7 @@
 ---
 templateKey: entry
 title: Console Log
-blurb: Displaying the console log on a mobile device.
+blurb: Display the browser's console on a mobile device.
 entryUrl: 'https://console.mikewgd.com'
 tags:
   - Vanilla JS
@@ -11,4 +11,4 @@ A tool for programmers to see a viewable console in the browser. Meant to be use
 
 <span class="entryMedia" thumb="https://res.cloudinary.com/dgjsyaqlh/image/upload/v1565784124/console-log_wkbrnu.png" full="https://res.cloudinary.com/dgjsyaqlh/video/upload/v1565780224/console-log_uhyu5l.mp4" type="video">A demo of the tool being used on an iPhone.</span>
 
- This is a bare bones console, not a replacement for the browsers console. Certain limitations and functionality that the browser's console has will not be implemented in order to keep the script file size down.
+This is a bare bones console, not a replacement for the browsers console. Some of the supported functions include: `log`, `time`, `timeEnd`, and more.
