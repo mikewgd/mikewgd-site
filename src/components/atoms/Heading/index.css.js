@@ -7,7 +7,7 @@ export const H1 = styled.h1`
   font-weight: 400;
   border-left: 5px solid ${Color.WELDON_BLUE};
   padding: 2px 0 2px 14px;
-  margin: ${props => props.margin || 0};
+  margin: 0;
   font-size: 24px;
   line-height: 135%;
   display: block;
@@ -48,7 +48,6 @@ export const H1 = styled.h1`
 
   ${media.md`
     font-size: 34px;
-    margin: ${props => props.desktopMargin || 0};
     padding-left: 24px;
 
     ${props => props.desktopMaxWidth && css`

@@ -38,6 +38,7 @@ const PortfolioEntry = ({ data }: Props) => {
         mobileMargin="23px 0"
         desktopMargin="30px 0 16px 0"
         text={title}
+        entry
       />
       {renderMarkdown(html)}
       <Paragraph margin="23px 0 48px 0">

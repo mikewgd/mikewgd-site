@@ -26,6 +26,12 @@ export const Main = styled.main`
   `}
 `;
 
+if (typeof window !== 'undefined') {
+  // Make scroll behavior of internal links smooth
+  // eslint-disable-next-line global-require
+  require('smooth-scroll')('a[href*="#"]');
+}
+
 type Props = {
   children: Node,
   maxWidth: String,

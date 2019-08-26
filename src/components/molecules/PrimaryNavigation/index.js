@@ -13,7 +13,7 @@ import { useToggle } from '../../../hooks/useToggle';
 const ROUTES = [
   {
     id: 'home',
-    text: 'Work',
+    text: 'Home',
     path: ROUTE.HOME,
   },
   {

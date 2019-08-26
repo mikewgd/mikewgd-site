@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import convert from 'htmr';
 
@@ -10,8 +11,12 @@ import {
   EntryCardList,
 } from 'components';
 
+const MyWorkHeader = styled(Heading.H2).attrs({
+  id: 'my-work',
+})``;
+
 const transform = {
-  h2: Heading.H2,
+  h2: MyWorkHeader,
 };
 
 type Props = {
