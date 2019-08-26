@@ -1,7 +1,7 @@
 backend:
   name: github
-  branch: dev
-  repo: mikewgd/mikewgd
+  branch: master
+  repo: mikewgd/mikewgd-site
 
 media_library:
   name: cloudinary
