@@ -18,4 +18,4 @@ I started around 2003 and at that time I became a huge fan of the TV Show, Charm
 
 On the same community I befriended another person and he owned his own website. I never knew someone who owned a website; I was very intrigued. I then got into free web hosting websites, like Geocities, Angelfire, etc., but I wanted to learn more. He then introduced me to the person that hosted his website. She taught me some of the basics and the rest is history. My skills in web and graphic design advanced through time as I began learning other languages (CSS, XHTML, PHP, MySQL, etc). <br><br>
 
-**Besides being a complete nerd I enjoy going to the gym, hiking, hanging out with my friends, playing with my dog Sophie and etc... 😜😄**
+**Besides being a complete nerd I enjoy going to the gym, hiking, hanging out with my friends, playing with my dog Sophie and etc... 😄**
