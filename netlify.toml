@@ -1,0 +1,12 @@
+[build]
+  publish = "public/"
+  command = "gatsby build"
+
+[build.environment]
+  GOOGLE_ANALYTICS = "UA-139156553-2"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  

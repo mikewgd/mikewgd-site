@@ -1,0 +1,129 @@
+backend:
+  name: github
+  branch: dev
+  repo: mikewgd/mikewgd
+
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: dgjsyaqlh
+    api_key: 598328843357324
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  -
+    name: entries
+    label: 'Portfolio Entry'
+    folder: src/pages/entry
+    create: true
+    slug: '{{title}}'
+    editor:
+      preview: true
+    fields:
+      -
+        label: 'Template Key'
+        name: 'templateKey'
+        widget: 'hidden'
+        default: 'entry'
+      -
+        label: Title
+        name: title
+        widget: string
+      -
+        label: Blurb
+        name: blurb
+        widget: text
+      -
+        label: Body
+        name: body
+        widget: markdown
+      -
+        label: Entry URL
+        name: entryUrl
+        widget: string
+        required: false
+      -
+        label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        options:
+          - Vue
+          - SCSS/CSS
+          - ES6
+          - React
+          - Contentful
+          - Angular
+          - Stylus/CSS
+          - Node
+          - MySQL
+          - jQuery
+          - Webpack
+          - Styled Components
+          - Redux
+          - Contentful UI Ext
+          - Paper   
+          - Saga
+          - AWS
+          - Gulp
+          - Vanilla JS
+          - PHP
+          - Netlify
+          - DatoCMS
+          - NetlifyCMS
+          - Gatsby
+      -
+        label: 'Created'
+        name: 'created'
+        widget: 'datetime'
+  -
+    label: Pages
+    name: pages
+    files:
+      -
+        label: 'About Page'
+        name: about
+        file: src/pages/about/index.md
+        fields:
+          -
+            label: 'Page Header'
+            name: pageHeader
+            widget: markdown
+          -
+            label: Body
+            name: body
+            widget: markdown
+          -
+            label: 'Social Links'
+            name: 'socialLinks'
+            widget: 'list'
+            fields:
+              -
+                label: 'Url'
+                name: 'socialUrl'
+                widget: string
+              -
+                label: 'Type'
+                name: 'socialType'
+                widget: 'select'
+                options: [
+                  'facebook',
+                  'instagram',
+                  'github',
+                  'linkedin',
+                ]
+      -
+        label: 'Home Page'
+        name: home
+        file: src/pages/index.md
+        fields:
+          -
+            label: 'Page Header'
+            name: pageHeader
+            widget: markdown
+          -
+            label: 'Body'
+            name: body
+            widget: markdown
