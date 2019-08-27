@@ -28,7 +28,7 @@ export const Logo = styled.div`
   &:before {
     content: '';
     display: inline-flex;
-    background: url(${logoMe}) top left no-repeat;
+    background: url(${props => props.src}) top left no-repeat;
     background-size: cover;
     height: 28px;
     width: 28px;
