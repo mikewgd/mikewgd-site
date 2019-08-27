@@ -9,9 +9,6 @@ media_library:
     cloud_name: dgjsyaqlh
     api_key: 598328843357324
 
-media_folder: static/img
-public_folder: /img
-
 collections:
   -
     name: entries
