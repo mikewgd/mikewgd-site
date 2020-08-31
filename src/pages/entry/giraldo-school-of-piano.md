@@ -19,4 +19,4 @@ Then, **Felipe** is your guy! A small private piano studio in New York, teaching
 
 Site created using Gatsby with Styled components. The content is managed via Netlify CMS. A custom CMS solution using content blocks which Netlify CMS offers.
 
-![]()
+![cms](https://res.cloudinary.com/dgjsyaqlh/image/upload/v1598885357/Screen_Shot_2020-08-31_at_10.46.58_AM_ibsnsb.png)
