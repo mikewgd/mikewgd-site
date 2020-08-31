@@ -17,8 +17,8 @@ created: 2020-08-31T14:41:01.973Z
 
 Then, **Felipe** is your guy! A small private piano studio in New York, teaching people of all ages how to play the piano. 
 
-<span class="entryMedia" thumb="undefined" full="https://res.cloudinary.com/dgjsyaqlh/video/upload/v1598885353/The_Giraldo_School_of_Piano_mmi5o8.mp4" type="video">Site demo</span>
+<span class="entryMedia" thumb="" full="" type="video">Site demo</span>
 
 Site created using Gatsby with Styled components. The content is managed via Netlify CMS. A custom CMS solution using content blocks which Netlify CMS offers.
 
-<span class="entryMedia" thumb="undefined" full="https://res.cloudinary.com/dgjsyaqlh/image/upload/v1598885357/Screen_Shot_2020-08-31_at_10.46.58_AM_ibsnsb.png" type="image">Screenshot of CMS.</span>
+<span class="entryMedia" thumb="https://res.cloudinary.com/dgjsyaqlh/image/upload/v1598885357/Screen_Shot_2020-08-31_at_10.46.58_AM_ibsnsb.png" full="https://res.cloudinary.com/dgjsyaqlh/image/upload/v1598885357/Screen_Shot_2020-08-31_at_10.46.58_AM_ibsnsb.png" type="image">Screenshot of CMS.</span>
